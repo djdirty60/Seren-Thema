@@ -68,7 +68,7 @@ The badges are original designs. They are not official Dolby or DTS logos.
 
 ### Updates
 
-From version 1.3.1 the theme updates itself through Seren. Seren checks for new versions automatically (setting **Interface → Automatically update themes**), or you can check by hand: **Tools → Open Settings Menu → Interface → Check For Updates**.
+From version 1.3.1 the theme updates itself through Seren. Seren checks for new versions automatically (setting **Interface → Enable Automatic Theme Updates**), or you can check by hand: **Tools → Open Settings Menu → Interface → Check For Updates**.
 
 Coming from 1.3.0 or older? Install 1.3.1 once with one of the methods above. After that, updates arrive by themselves.
 
