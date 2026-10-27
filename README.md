@@ -55,7 +55,7 @@ The badges are original designs. They are not official Dolby or DTS logos.
 2. Under Themes, choose **Install Theme → Web Location**.
 3. Enter this address:
    ```
-   https://github.com/djdirty60/Seren-Thema/releases/download/1.2.0/seren.theme.nuvioarcv2.zip
+   https://github.com/djdirty60/Seren-Thema/releases/latest/download/seren.theme.nuvioarcv2.zip
    ```
 4. Seren asks whether you want to use the theme. Choose **Yes**.
 
@@ -76,6 +76,24 @@ Go to **Tools → Open Settings Menu → Interface → Switch Theme** and choose
 
 - **Logos and backdrops** come from Seren itself (TMDB). Enter a free **Fanart.tv API key** in Seren to get more logos. If there is no logo, the title is shown in large letters instead.
 - **Font**: the theme uses the fonts of your Kodi skin, so it may look slightly different from skin to skin.
+
+### Works with these Kodi skins
+
+The theme only uses the font names every skin has (or that Kodi falls back on), and keeps all its own images in a separate `nuvioarc/` folder, so they never clash with your skin's images. Tested against the font files of:
+
+| Skin | | Skin | |
+|---|---|---|---|
+| Estuary (Kodi default) | ✅ | Arctic Fuse | ✅ |
+| Nuvio Arc | ✅ | Arctic Fuse 2 | ✅ |
+| Confluence | ✅ | Arctic Fuse 3 | ✅ |
+| Arctic: Zephyr - Reloaded | ✅ | Bingie | ✅ |
+| Aeon Nox: SiLVO | ✅ | FENtastic | ✅ |
+| Eminence | ✅ | Mimic-LR | ✅ |
+| Eminence 2 | ✅ | Amber | ✅ |
+| Arctic Horizon | ✅ | Quartz | ✅ |
+| Arctic Horizon 2 | ✅ | | |
+
+In some skins the big titles are a bit smaller, because those skins have no large font with a standard name.
 - **Not themed**: the filter, sort and provider settings windows. These keep the default Seren style.
 - Made for Seren 3.x (Kodi 21 and 22), 1080p screen resolution.
 
@@ -89,7 +107,7 @@ resources/
     ├── meta.json              theme name and version
     └── Default/
         ├── 1080i/             the windows (XML)
-        └── media/             textures
+        └── media/nuvioarc/    textures
             └── flags/         the badges
 screenshots/                   images for this README
 ```

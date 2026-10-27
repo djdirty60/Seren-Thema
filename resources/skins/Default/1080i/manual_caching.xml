@@ -17,7 +17,7 @@
             <visible>!String.IsEqual(Window().Property(instant_close),true)</visible>
 
             <control type="image">
-                <texture>white.png</texture>
+                <texture>nuvioarc/white.png</texture>
                 <colordiffuse>FF0B1119</colordiffuse>
             </control>
             <control type="image">
@@ -27,22 +27,22 @@
             </control>
             <control type="image">
                 <width>1500</width>
-                <texture>grad_left.png</texture>
+                <texture>nuvioarc/grad_left.png</texture>
                 <colordiffuse>F50B1119</colordiffuse>
             </control>
             <control type="image">
                 <top>440</top>
                 <height>640</height>
-                <texture>grad_bottom.png</texture>
+                <texture>nuvioarc/grad_bottom.png</texture>
                 <colordiffuse>FF0B1119</colordiffuse>
             </control>
             <control type="image">
                 <height>260</height>
-                <texture>grad_top.png</texture>
+                <texture>nuvioarc/grad_top.png</texture>
                 <colordiffuse>990B1119</colordiffuse>
             </control>
             <control type="image">
-                <texture>vignette.png</texture>
+                <texture>nuvioarc/vignette.png</texture>
                 <colordiffuse>99000000</colordiffuse>
             </control>
         </control>
@@ -105,8 +105,8 @@
                     <textoffsetx>20</textoffsetx>
                     <textcolor>FFFFFFFF</textcolor>
                     <disabledcolor>FFFFFFFF</disabledcolor>
-                    <texturenofocus border="22" colordiffuse="2EFFFFFF">pill44.png</texturenofocus>
-                    <texturefocus border="22" colordiffuse="2EFFFFFF">pill44.png</texturefocus>
+                    <texturenofocus border="22" colordiffuse="2EFFFFFF">nuvioarc/pill44.png</texturenofocus>
+                    <texturefocus border="22" colordiffuse="2EFFFFFF">nuvioarc/pill44.png</texturefocus>
                     <enable>false</enable>
                     <label>[B]S$INFO[Window().Property(item.info.season)] · E$INFO[Window().Property(item.info.episode)][/B]</label>
                     <visible>!String.IsEmpty(Window().Property(item.info.season))</visible>
@@ -119,8 +119,8 @@
                     <textoffsetx>20</textoffsetx>
                     <textcolor>FFDCE2E7</textcolor>
                     <disabledcolor>FFDCE2E7</disabledcolor>
-                    <texturenofocus border="22" colordiffuse="1AFFFFFF">pill44.png</texturenofocus>
-                    <texturefocus border="22" colordiffuse="1AFFFFFF">pill44.png</texturefocus>
+                    <texturenofocus border="22" colordiffuse="1AFFFFFF">nuvioarc/pill44.png</texturenofocus>
+                    <texturefocus border="22" colordiffuse="1AFFFFFF">nuvioarc/pill44.png</texturefocus>
                     <enable>false</enable>
                     <label>$INFO[Window().Property(item.info.year)]</label>
                     <visible>!String.IsEmpty(Window().Property(item.info.year))</visible>
@@ -133,8 +133,8 @@
                     <textoffsetx>20</textoffsetx>
                     <textcolor>FFDCE2E7</textcolor>
                     <disabledcolor>FFDCE2E7</disabledcolor>
-                    <texturenofocus border="22" colordiffuse="1AFFFFFF">pill44.png</texturenofocus>
-                    <texturefocus border="22" colordiffuse="1AFFFFFF">pill44.png</texturefocus>
+                    <texturenofocus border="22" colordiffuse="1AFFFFFF">nuvioarc/pill44.png</texturenofocus>
+                    <texturefocus border="22" colordiffuse="1AFFFFFF">nuvioarc/pill44.png</texturefocus>
                     <enable>false</enable>
                     <label>★ $INFO[Window().Property(item.info.rating)]</label>
                     <visible>!String.IsEmpty(Window().Property(item.info.rating))</visible>
@@ -147,8 +147,8 @@
                     <textoffsetx>20</textoffsetx>
                     <textcolor>FFDCE2E7</textcolor>
                     <disabledcolor>FFDCE2E7</disabledcolor>
-                    <texturenofocus border="22" colordiffuse="1AFFFFFF">pill44_edge.png</texturenofocus>
-                    <texturefocus border="22" colordiffuse="1AFFFFFF">pill44_edge.png</texturefocus>
+                    <texturenofocus border="22" colordiffuse="1AFFFFFF">nuvioarc/pill44_edge.png</texturenofocus>
+                    <texturefocus border="22" colordiffuse="1AFFFFFF">nuvioarc/pill44_edge.png</texturefocus>
                     <enable>false</enable>
                     <label>$INFO[Window().Property(item.info.mpaa)]</label>
                     <visible>!String.IsEmpty(Window().Property(item.info.mpaa))</visible>
@@ -184,7 +184,7 @@
                 <height>36</height>
                 <font>font12</font>
                 <textcolor>FF8F9BA6</textcolor>
-                <label>Kies een torrent om hem bij je debrid-dienst te laten cachen.</label>
+                <label>Kies een torrent om te laten cachen.</label>
             </control>
 
             <!-- Action pills -->
@@ -207,8 +207,8 @@
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
                     <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="32" colordiffuse="FFFFFFFF">pill64.png</texturefocus>
-                    <texturenofocus border="32" colordiffuse="24FFFFFF">pill64.png</texturenofocus>
+                    <texturefocus border="32" colordiffuse="FFFFFFFF">nuvioarc/pill64.png</texturefocus>
+                    <texturenofocus border="32" colordiffuse="24FFFFFF">nuvioarc/pill64.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$INFO[Window().Property(close.text)][/B]</label>
                 </control>
@@ -234,15 +234,15 @@
                 <top>-40</top>
                 <width>1064</width>
                 <height>1048</height>
-                <texture border="88">panel_shadow.png</texture>
+                <texture border="88">nuvioarc/panel_shadow.png</texture>
                 <colordiffuse>99000000</colordiffuse>
             </control>
             <control type="image">
-                <texture border="48">panel.png</texture>
+                <texture border="48">nuvioarc/panel.png</texture>
                 <colordiffuse>E0162532</colordiffuse>
             </control>
             <control type="image">
-                <texture border="48">panel_edge.png</texture>
+                <texture border="48">nuvioarc/panel_edge.png</texture>
                 <colordiffuse>2EFFFFFF</colordiffuse>
             </control>
 
@@ -271,7 +271,7 @@
                 <top>96</top>
                 <width>904</width>
                 <height>1</height>
-                <texture>white.png</texture>
+                <texture>nuvioarc/white.png</texture>
                 <colordiffuse>1AFFFFFF</colordiffuse>
             </control>
 
@@ -284,9 +284,9 @@
                 <onleft>1000</onleft>
                 <showonepage>false</showonepage>
                 <orientation>vertical</orientation>
-                <texturesliderbackground colordiffuse="14FFFFFF" border="3">pill6.png</texturesliderbackground>
-                <texturesliderbar colordiffuse="4DFFFFFF" border="3">pill6.png</texturesliderbar>
-                <texturesliderbarfocus colordiffuse="FFFFFFFF" border="3">pill6.png</texturesliderbarfocus>
+                <texturesliderbackground colordiffuse="14FFFFFF" border="3">nuvioarc/pill6.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="4DFFFFFF" border="3">nuvioarc/pill6.png</texturesliderbar>
+                <texturesliderbarfocus colordiffuse="FFFFFFFF" border="3">nuvioarc/pill6.png</texturesliderbarfocus>
             </control>
 
             <!-- Stream list -->
@@ -313,7 +313,7 @@
                         <height>124</height>
 
                         <control type="image">
-                            <texture border="32">card.png</texture>
+                            <texture border="32">nuvioarc/card.png</texture>
                             <colordiffuse>0FFFFFFF</colordiffuse>
                         </control>
 
@@ -323,7 +323,7 @@
                             <top>20</top>
                             <width>124</width>
                             <height>42</height>
-                            <texture border="21">pill42.png</texture>
+                            <texture border="21">nuvioarc/pill42.png</texture>
                             <colordiffuse>1AFFFFFF</colordiffuse>
                         </control>
                         <control type="label">
@@ -381,7 +381,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.hdrcodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.hdrcodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1))</visible>
                             </control>
@@ -390,7 +390,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.hdrcodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.hdrcodec_2)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1))]]</visible>
                             </control>
@@ -399,7 +399,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.videocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2))]]</visible>
                             </control>
@@ -408,7 +408,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.videocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2))]]</visible>
                             </control>
@@ -417,7 +417,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.videocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2))]]</visible>
                             </control>
@@ -426,7 +426,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -435,7 +435,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -444,7 +444,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -453,7 +453,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -462,7 +462,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -471,7 +471,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -480,7 +480,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -489,7 +489,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -498,7 +498,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -507,7 +507,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -516,7 +516,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -525,7 +525,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -534,7 +534,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -543,7 +543,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -552,7 +552,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -561,7 +561,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -570,7 +570,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -579,7 +579,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -588,7 +588,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -597,7 +597,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -606,7 +606,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -623,7 +623,7 @@
                         <height>124</height>
 
                         <control type="image">
-                            <texture border="32">card.png</texture>
+                            <texture border="32">nuvioarc/card.png</texture>
                             <colordiffuse>1AFFFFFF</colordiffuse>
                         </control>
                         <control type="image">
@@ -631,7 +631,7 @@
                             <top>20</top>
                             <width>124</width>
                             <height>42</height>
-                            <texture border="21">pill42.png</texture>
+                            <texture border="21">nuvioarc/pill42.png</texture>
                             <colordiffuse>1AFFFFFF</colordiffuse>
                         </control>
                         <control type="label">
@@ -684,7 +684,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.hdrcodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.hdrcodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1))</visible>
                             </control>
@@ -693,7 +693,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.hdrcodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.hdrcodec_2)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1))]]</visible>
                             </control>
@@ -702,7 +702,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.videocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2))]]</visible>
                             </control>
@@ -711,7 +711,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.videocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2))]]</visible>
                             </control>
@@ -720,7 +720,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.videocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2))]]</visible>
                             </control>
@@ -729,7 +729,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -738,7 +738,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -747,7 +747,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -756,7 +756,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -765,7 +765,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -774,7 +774,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -783,7 +783,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -792,7 +792,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -801,7 +801,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -810,7 +810,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -819,7 +819,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -828,7 +828,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -837,7 +837,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -846,7 +846,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -855,7 +855,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -864,7 +864,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -873,7 +873,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -882,7 +882,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -891,7 +891,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -900,7 +900,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -909,7 +909,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -932,17 +932,17 @@
                             <top>-24</top>
                             <width>952</width>
                             <height>172</height>
-                            <texture border="56">card_glow.png</texture>
+                            <texture border="56">nuvioarc/card_glow.png</texture>
                             <colordiffuse>66D6F0FF</colordiffuse>
                         </control>
                         <!-- Body -->
                         <control type="image">
-                            <texture border="32">card.png</texture>
+                            <texture border="32">nuvioarc/card.png</texture>
                             <colordiffuse>FF2C3E4C</colordiffuse>
                         </control>
                         <!-- Edge -->
                         <control type="image">
-                            <texture border="32">card_edge.png</texture>
+                            <texture border="32">nuvioarc/card_edge.png</texture>
                             <colordiffuse>F2FFFFFF</colordiffuse>
                         </control>
 
@@ -952,7 +952,7 @@
                             <top>20</top>
                             <width>124</width>
                             <height>42</height>
-                            <texture border="21">pill42.png</texture>
+                            <texture border="21">nuvioarc/pill42.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                         </control>
                         <control type="label">
@@ -1007,7 +1007,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.hdrcodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.hdrcodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1))</visible>
                             </control>
@@ -1016,7 +1016,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.hdrcodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.hdrcodec_2)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1))]]</visible>
                             </control>
@@ -1025,7 +1025,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.videocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2))]]</visible>
                             </control>
@@ -1034,7 +1034,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.videocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2))]]</visible>
                             </control>
@@ -1043,7 +1043,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.videocodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.videocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2))]]</visible>
                             </control>
@@ -1052,7 +1052,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -1061,7 +1061,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -1070,7 +1070,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -1079,7 +1079,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
                             </control>
@@ -1088,7 +1088,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -1097,7 +1097,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -1106,7 +1106,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -1115,7 +1115,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -1124,7 +1124,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1))]]</visible>
                             </control>
@@ -1133,7 +1133,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -1142,7 +1142,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -1151,7 +1151,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -1160,7 +1160,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -1169,7 +1169,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiocodec_2)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiocodec_2)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1))]]</visible>
                             </control>
@@ -1178,7 +1178,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -1187,7 +1187,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -1196,7 +1196,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -1205,7 +1205,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -1214,7 +1214,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -1223,7 +1223,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>
@@ -1232,7 +1232,7 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
-                                <texture>flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
+                                <texture>nuvioarc/flags/$INFO[ListItem.Property(info.audiochannels_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <visible>!String.IsEmpty(ListItem.Property(info.audiochannels_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1)) + !String.IsEmpty(ListItem.Property(info.misc_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_1)) + !String.IsEmpty(ListItem.Property(info.audiocodec_2))]]</visible>
                             </control>

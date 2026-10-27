@@ -12,7 +12,7 @@
         <!-- Cinematic backdrop -->
         <control type="group">
             <control type="image">
-                <texture>white.png</texture>
+                <texture>nuvioarc/white.png</texture>
                 <colordiffuse>FF0B1119</colordiffuse>
             </control>
             <control type="image">
@@ -21,17 +21,17 @@
             </control>
             <control type="image">
                 <width>1500</width>
-                <texture>grad_left.png</texture>
+                <texture>nuvioarc/grad_left.png</texture>
                 <colordiffuse>F50B1119</colordiffuse>
             </control>
             <control type="image">
                 <top>440</top>
                 <height>640</height>
-                <texture>grad_bottom.png</texture>
+                <texture>nuvioarc/grad_bottom.png</texture>
                 <colordiffuse>FF0B1119</colordiffuse>
             </control>
             <control type="image">
-                <texture>vignette.png</texture>
+                <texture>nuvioarc/vignette.png</texture>
                 <colordiffuse>99000000</colordiffuse>
             </control>
         </control>
@@ -95,15 +95,15 @@
                 <top>-40</top>
                 <width>1180</width>
                 <height>388</height>
-                <texture border="88">panel_shadow.png</texture>
+                <texture border="88">nuvioarc/panel_shadow.png</texture>
                 <colordiffuse>80000000</colordiffuse>
             </control>
             <control type="image">
-                <texture border="48">panel.png</texture>
+                <texture border="48">nuvioarc/panel.png</texture>
                 <colordiffuse>E0162532</colordiffuse>
             </control>
             <control type="image">
-                <texture border="48">panel_edge.png</texture>
+                <texture border="48">nuvioarc/panel_edge.png</texture>
                 <colordiffuse>2EFFFFFF</colordiffuse>
             </control>
 
@@ -164,12 +164,12 @@
                 <width>1020</width>
                 <height>6</height>
                 <control type="image">
-                    <texture border="3">pill6.png</texture>
+                    <texture border="3">nuvioarc/pill6.png</texture>
                     <colordiffuse>1FFFFFFF</colordiffuse>
                 </control>
                 <control type="image">
                     <width>220</width>
-                    <texture border="3">pill6.png</texture>
+                    <texture border="3">nuvioarc/pill6.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="slide" start="0,0" end="800,0" time="1100" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
                 </control>
@@ -192,8 +192,8 @@
                     <aligny>center</aligny>
                     <textcolor>FF0B1119</textcolor>
                     <disabledcolor>FF0B1119</disabledcolor>
-                    <texturenofocus border="24" colordiffuse="FFFFFFFF">pill48.png</texturenofocus>
-                    <texturefocus border="24" colordiffuse="FFFFFFFF">pill48.png</texturefocus>
+                    <texturenofocus border="24" colordiffuse="FFFFFFFF">nuvioarc/pill48.png</texturenofocus>
+                    <texturefocus border="24" colordiffuse="FFFFFFFF">nuvioarc/pill48.png</texturefocus>
                     <enable>false</enable>
                     <label>[B]$INFO[Window().Property(source_resolution)][/B]</label>
                     <visible>!String.IsEmpty(Window().Property(source_resolution))</visible>
@@ -206,8 +206,8 @@
                     <aligny>center</aligny>
                     <textcolor>FFDCE2E7</textcolor>
                     <disabledcolor>FFDCE2E7</disabledcolor>
-                    <texturenofocus border="24" colordiffuse="1AFFFFFF">pill48.png</texturenofocus>
-                    <texturefocus border="24" colordiffuse="1AFFFFFF">pill48.png</texturefocus>
+                    <texturenofocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturenofocus>
+                    <texturefocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturefocus>
                     <enable>false</enable>
                     <label>[UPPERCASE]$INFO[Window().Property(source_type)][/UPPERCASE]</label>
                     <visible>!String.IsEmpty(Window().Property(source_type))</visible>
@@ -220,8 +220,8 @@
                     <aligny>center</aligny>
                     <textcolor>FFDCE2E7</textcolor>
                     <disabledcolor>FFDCE2E7</disabledcolor>
-                    <texturenofocus border="24" colordiffuse="1AFFFFFF">pill48.png</texturenofocus>
-                    <texturefocus border="24" colordiffuse="1AFFFFFF">pill48.png</texturefocus>
+                    <texturenofocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturenofocus>
+                    <texturefocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturefocus>
                     <enable>false</enable>
                     <label>$INFO[Window().Property(source_size)]</label>
                     <visible>!String.IsEmpty(Window().Property(source_size))</visible>
@@ -231,49 +231,49 @@
                     <width>88</width>
                     <height>48</height>
                     <aspectratio aligny="center">keep</aspectratio>
-                    <texture>flags/$INFO[Window().Property(info.hdrcodec_1)].png</texture>
+                    <texture>nuvioarc/flags/$INFO[Window().Property(info.hdrcodec_1)].png</texture>
                     <visible>!String.IsEmpty(Window().Property(info.hdrcodec_1))</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
                     <height>48</height>
                     <aspectratio aligny="center">keep</aspectratio>
-                    <texture>flags/$INFO[Window().Property(info.hdrcodec_2)].png</texture>
+                    <texture>nuvioarc/flags/$INFO[Window().Property(info.hdrcodec_2)].png</texture>
                     <visible>!String.IsEmpty(Window().Property(info.hdrcodec_2))</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
                     <height>48</height>
                     <aspectratio aligny="center">keep</aspectratio>
-                    <texture>flags/$INFO[Window().Property(info.videocodec_1)].png</texture>
+                    <texture>nuvioarc/flags/$INFO[Window().Property(info.videocodec_1)].png</texture>
                     <visible>!String.IsEmpty(Window().Property(info.videocodec_1))</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
                     <height>48</height>
                     <aspectratio aligny="center">keep</aspectratio>
-                    <texture>flags/$INFO[Window().Property(info.misc_1)].png</texture>
+                    <texture>nuvioarc/flags/$INFO[Window().Property(info.misc_1)].png</texture>
                     <visible>!String.IsEmpty(Window().Property(info.misc_1))</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
                     <height>48</height>
                     <aspectratio aligny="center">keep</aspectratio>
-                    <texture>flags/$INFO[Window().Property(info.audiocodec_1)].png</texture>
+                    <texture>nuvioarc/flags/$INFO[Window().Property(info.audiocodec_1)].png</texture>
                     <visible>!String.IsEmpty(Window().Property(info.audiocodec_1))</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
                     <height>48</height>
                     <aspectratio aligny="center">keep</aspectratio>
-                    <texture>flags/$INFO[Window().Property(info.audiocodec_2)].png</texture>
+                    <texture>nuvioarc/flags/$INFO[Window().Property(info.audiocodec_2)].png</texture>
                     <visible>!String.IsEmpty(Window().Property(info.audiocodec_2))</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
                     <height>48</height>
                     <aspectratio aligny="center">keep</aspectratio>
-                    <texture>flags/$INFO[Window().Property(info.audiochannels_1)].png</texture>
+                    <texture>nuvioarc/flags/$INFO[Window().Property(info.audiochannels_1)].png</texture>
                     <visible>!String.IsEmpty(Window().Property(info.audiochannels_1))</visible>
                 </control>
             </control>
