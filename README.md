@@ -53,15 +53,15 @@ The badges are original designs. They are not official Dolby or DTS logos.
 
 1. Open Seren and go to **Tools → Open Settings Menu → Interface**.
 2. Under Themes, choose **Install Theme → Web Location**.
-3. Enter this address (replace `USER/REPO` with the name of this repository):
+3. Enter this address:
    ```
-   https://github.com/USER/REPO/zipball/main
+   https://github.com/djdirty60/Seren-Thema/releases/download/1.2.0/seren.theme.nuvioarcv2.zip
    ```
 4. Seren asks whether you want to use the theme. Choose **Yes**.
 
 ### Method 2: with a zip file
 
-1. Download this repository as a zip (green button **Code → Download ZIP**).
+1. Download `seren.theme.nuvioarcv2.zip` from the [Releases page](https://github.com/djdirty60/Seren-Thema/releases).
 2. Copy the file to your device, for example to the *Download* folder.
 3. In Seren, go to **Tools → Open Settings Menu → Interface → Install Theme → Browse**.
 4. Select the zip file, then choose **Yes**.
@@ -94,7 +94,7 @@ resources/
 screenshots/                   images for this README
 ```
 
-Seren expects the `resources/` folder at the top level of the zip, so don't move it.
+Seren expects the `resources/` folder at the top level of the zip, so don't move it. The zip in the Releases is already built this way.
 
 ---
 
