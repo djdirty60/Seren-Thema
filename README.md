@@ -1,104 +1,104 @@
-# Nuvio Arc V2 – thema voor Seren
+# Nuvio Arc V2 – theme for Seren
 
-Een donker, cinematisch thema voor de Kodi-add-on **Seren**, in de stijl van **Nuvio Arc V2** (Cinematic Glass): grote achtergronden, glazen panelen, afgeronde kaarten en een witte gloed op de geselecteerde knop.
+A dark, cinematic theme for the Kodi add-on **Seren**, styled after **Nuvio Arc V2** (Cinematic Glass): large backdrops, glass panels, rounded cards and a white glow on the selected button.
 
-![Bronkeuze](screenshots/bronkeuze.jpg)
+![Source select](screenshots/bronkeuze.jpg)
 
-> De afbeeldingen zijn voorbeelden met nep-artwork. In Kodi zie je de echte achtergrond en het echte logo van de film of serie.
+> The images are previews with placeholder artwork. In Kodi you will see the real backdrop and logo of the movie or show.
 
 ---
 
-## Wat zit erin
+## What's included
 
-| Scherm | Wat je ziet |
+| Screen | What you see |
 | --- | --- |
-| **Bronkeuze** | Logo, info en beschrijving links; rechts een glazen paneel met alle streams als kaarten, met kwaliteit, provider, debrid, grootte en badges |
-| **Streams zoeken** | Voortgangsbalk en aantallen per kwaliteit (4K, 1080p, 720p, SD) en per brontype |
-| **Stream openen** | Glazen kaart met laadbalkje en badges van de gekozen stream |
-| **Volgende aflevering / Kijk je nog?** | Glazen kaart rechtsonder over de video, met afgeronde afbeelding en aftelbalkje |
-| **Handmatig cachen** | Zelfde stijl als de bronkeuze, met het aantal seeds |
-| **Download Manager** | Kaart per download met percentage, voortgangsbalk, snelheid en resterende tijd |
-| **Achtergrond** | Achtergrondfoto en logo tijdens het laden |
+| **Source select** | Logo, info and plot on the left; on the right a glass panel with all streams as cards, showing quality, provider, debrid, size and badges |
+| **Scraping** | Progress bar and counts per quality (4K, 1080p, 720p, SD) and per source type |
+| **Resolving** | Glass card with a loading bar and the badges of the chosen stream |
+| **Playing next / Still watching?** | Glass card at the bottom right over the video, with a rounded thumbnail and a countdown bar |
+| **Manual caching** | Same style as source select, including the number of seeds |
+| **Download Manager** | One card per download with percentage, progress bar, speed and time remaining |
+| **Background** | Backdrop and logo while loading |
 
-### Badges in plaats van tekst
+### Badges instead of text
 
-In plaats van `DV | HDR | ATMOS` toont het thema gekleurde badges, bijvoorbeeld **Dolby Vision**, **HDR**, **HEVC**, **REMUX**, **Atmos**, **TrueHD**, **DTS:X** en **5.1 / 7.1**. Er zijn 40 badges. Elke stream laat alleen zijn eigen badges zien, netjes naast elkaar zonder gaten. Slechte versies (CAM, SCR, HC-subs) zijn rood.
+Instead of `DV | HDR | ATMOS`, the theme shows coloured badges, for example **Dolby Vision**, **HDR**, **HEVC**, **REMUX**, **Atmos**, **TrueHD**, **DTS:X** and **5.1 / 7.1**. There are 40 badges. Each stream only shows its own badges, neatly side by side without gaps. Low-quality releases (CAM, SCR, HC subs) are red.
 
-De badges zijn eigen ontwerpen. Het zijn geen officiële logo's van Dolby of DTS.
+The badges are original designs. They are not official Dolby or DTS logos.
 
 ---
 
-## Schermafbeeldingen
+## Screenshots
 
-**Streams zoeken**
-![Streams zoeken](screenshots/streams-zoeken.jpg)
+**Scraping**
+![Scraping](screenshots/streams-zoeken.jpg)
 
-**Stream openen**
-![Stream openen](screenshots/stream-openen.jpg)
+**Resolving**
+![Resolving](screenshots/stream-openen.jpg)
 
-**Volgende aflevering**
-![Volgende aflevering](screenshots/volgende-aflevering.jpg)
+**Playing next**
+![Playing next](screenshots/volgende-aflevering.jpg)
 
-**Handmatig cachen**
-![Handmatig cachen](screenshots/handmatig-cachen.jpg)
+**Manual caching**
+![Manual caching](screenshots/handmatig-cachen.jpg)
 
 **Download Manager**
 ![Download Manager](screenshots/downloads.jpg)
 
 ---
 
-## Installeren
+## Installation
 
-### Manier 1: rechtstreeks vanaf GitHub (makkelijkst)
+### Method 1: directly from GitHub (easiest)
 
-1. Open Seren en ga naar **Gereedschap → Instellingen openen → Interface**.
-2. Kies bij Thema's **Thema installeren → Webadres** (*Web Location*).
-3. Vul dit adres in (vervang `GEBRUIKER/REPO` door de naam van deze repository):
+1. Open Seren and go to **Tools → Open Settings Menu → Interface**.
+2. Under Themes, choose **Install Theme → Web Location**.
+3. Enter this address (replace `USER/REPO` with the name of this repository):
    ```
-   https://github.com/GEBRUIKER/REPO/zipball/main
+   https://github.com/USER/REPO/zipball/main
    ```
-4. Seren vraagt of je het thema wilt gebruiken. Kies **Ja**.
+4. Seren asks whether you want to use the theme. Choose **Yes**.
 
-### Manier 2: met een zip-bestand
+### Method 2: with a zip file
 
-1. Download deze repository als zip (groene knop **Code → Download ZIP**).
-2. Zet het bestand op je apparaat, bijvoorbeeld in de map *Download*.
-3. Ga in Seren naar **Gereedschap → Instellingen openen → Interface → Thema installeren → Bladeren**.
-4. Kies het zip-bestand en daarna **Ja**.
+1. Download this repository as a zip (green button **Code → Download ZIP**).
+2. Copy the file to your device, for example to the *Download* folder.
+3. In Seren, go to **Tools → Open Settings Menu → Interface → Install Theme → Browse**.
+4. Select the zip file, then choose **Yes**.
 
-### Terug naar het standaardthema
+### Back to the default theme
 
-Ga naar **Gereedschap → Instellingen openen → Interface → Thema wisselen** en kies **Seren Default**.
+Go to **Tools → Open Settings Menu → Interface → Switch Theme** and choose **Seren Default**.
 
 ---
 
-## Goed om te weten
+## Good to know
 
-- **Logo's en achtergronden** komen uit Seren zelf (TMDB). Vul in Seren een gratis **Fanart.tv API-sleutel** in voor meer logo's. Is er geen logo, dan staat de titel in grote letters.
-- **Lettertype**: het thema gebruikt de lettertypen van je Kodi-skin. Het kan er dus per skin net iets anders uitzien.
-- **Niet aangepast**: de vensters voor filteren, sorteren en provider-instellingen. Die blijven in de standaard Seren-stijl.
-- Gemaakt voor Seren 3.x (Kodi 21 en 22), schermresolutie 1080p.
+- **Logos and backdrops** come from Seren itself (TMDB). Enter a free **Fanart.tv API key** in Seren to get more logos. If there is no logo, the title is shown in large letters instead.
+- **Font**: the theme uses the fonts of your Kodi skin, so it may look slightly different from skin to skin.
+- **Not themed**: the filter, sort and provider settings windows. These keep the default Seren style.
+- Made for Seren 3.x (Kodi 21 and 22), 1080p screen resolution.
 
 ---
 
-## Mapstructuur
+## Folder structure
 
 ```
 resources/
 └── skins/
-    ├── meta.json              naam en versie van het thema
+    ├── meta.json              theme name and version
     └── Default/
-        ├── 1080i/             de vensters (XML)
-        └── media/             texturen
-            └── flags/         de badges
-screenshots/                   afbeeldingen voor deze README
+        ├── 1080i/             the windows (XML)
+        └── media/             textures
+            └── flags/         the badges
+screenshots/                   images for this README
 ```
 
-Seren verwacht de map `resources/` bovenaan in de zip. Verplaats die dus niet.
+Seren expects the `resources/` folder at the top level of the zip, so don't move it.
 
 ---
 
 ## Credits
 
-- Geïnspireerd op het ontwerp van [Nuvio Arc](https://github.com/ysosrs123/NuvioTV-Fork). Dit thema is daar niet aan verbonden.
-- Gemaakt voor [Seren](https://github.com/nixgates/plugin.video.seren) van Nixgates. Ook daar is dit thema niet aan verbonden.
+- Inspired by the design of [Nuvio Arc](https://github.com/ysosrs123/NuvioTV-Fork). This theme is not affiliated with it.
+- Made for [Seren](https://github.com/nixgates/plugin.video.seren) by Nixgates. This theme is not affiliated with Seren either.
