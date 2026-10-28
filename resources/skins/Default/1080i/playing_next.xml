@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Nuvio Arc V2 theme for Seren - Volgende aflevering -->
+<!-- Lucent theme for Seren - Volgende aflevering -->
 <window>
     <onload>Dialog.Close(fullscreeninfo,true)</onload>
     <onload>Dialog.Close(videoosd,true)</onload>

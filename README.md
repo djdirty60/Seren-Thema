@@ -1,6 +1,10 @@
-# Nuvio Arc V2 – theme for Seren
+<p align="center"><img src="screenshots/lucent.jpg" alt="Lucent" width="720"></p>
 
-A dark, cinematic theme for the Kodi add-on **Seren**, styled after **Nuvio Arc V2** (Cinematic Glass): large backdrops, glass panels, rounded cards and a white glow on the selected button.
+# Lucent – theme for Seren
+
+> Formerly called *Nuvio Arc V2*.
+
+**Lucent** is a dark, cinematic theme for the Kodi add-on **Seren** in a glass style: large backdrops, glass panels, rounded cards and a white glow on the selected button.
 
 ![Source select](screenshots/bronkeuze.jpg)
 
@@ -55,13 +59,13 @@ The badges are original designs. They are not official Dolby or DTS logos.
 2. Under Themes, choose **Install Theme → Web Location**.
 3. Enter this address:
    ```
-   https://github.com/djdirty60/Seren-Thema/releases/latest/download/seren.theme.nuvioarcv2.zip
+   https://github.com/djdirty60/Seren-Thema/releases/latest/download/seren.theme.lucent.zip
    ```
 4. Seren asks whether you want to use the theme. Choose **Yes**.
 
 ### Method 2: with a zip file
 
-1. Download `seren.theme.nuvioarcv2.zip` from the [Releases page](https://github.com/djdirty60/Seren-Thema/releases).
+1. Download `seren.theme.lucent.zip` from the [Releases page](https://github.com/djdirty60/Seren-Thema/releases).
 2. Copy the file to your device, for example to the *Download* folder.
 3. In Seren, go to **Tools → Open Settings Menu → Interface → Install Theme → Browse**.
 4. Select the zip file, then choose **Yes**.
@@ -71,6 +75,8 @@ The badges are original designs. They are not official Dolby or DTS logos.
 From version 1.3.2 the theme updates itself through Seren. Seren checks for new versions automatically (setting **Interface → Enable Automatic Theme Updates**), or you can check by hand: **Tools → Open Settings Menu → Interface → Check For Updates**.
 
 Coming from 1.3.0 or older? Install the latest version once with one of the methods above. After that, updates arrive by themselves.
+
+**Coming from Nuvio Arc V2 (1.3.x)?** The update to 1.4.0 installs the theme under its new name **Lucent**, next to the old one. Switch to it once: **Tools → Open Settings Menu → Interface → Switch Theme → Lucent**. Then remove the old one: **Uninstall Theme → Nuvio Arc V2**.
 
 ### Back to the default theme
 
@@ -90,7 +96,7 @@ The theme only uses the font names every skin has (or that Kodi falls back on), 
 | Skin | | Skin | |
 |---|---|---|---|
 | Estuary (Kodi default) | ✅ | Arctic Fuse | ✅ |
-| Nuvio Arc | ✅ | Arctic Fuse 2 | ✅ |
+| Lucent (Nuvio Arc) | ✅ | Arctic Fuse 2 | ✅ |
 | Confluence | ✅ | Arctic Fuse 3 | ✅ |
 | Arctic: Zephyr - Reloaded | ✅ | Bingie | ✅ |
 | Aeon Nox: SiLVO | ✅ | FENtastic | ✅ |
