@@ -12,7 +12,7 @@
         <!-- ============ Backdrop ============ -->
         <control type="group">
             <control type="image">
-                <texture>nuvioarc/white.png</texture>
+                <texture>lucent/white.png</texture>
                 <colordiffuse>FF0B1119</colordiffuse>
             </control>
             <control type="image">
@@ -21,17 +21,17 @@
             </control>
             <control type="image">
                 <width>1500</width>
-                <texture>nuvioarc/grad_left.png</texture>
+                <texture>lucent/grad_left.png</texture>
                 <colordiffuse>F50B1119</colordiffuse>
             </control>
             <control type="image">
                 <top>440</top>
                 <height>640</height>
-                <texture>nuvioarc/grad_bottom.png</texture>
+                <texture>lucent/grad_bottom.png</texture>
                 <colordiffuse>FF0B1119</colordiffuse>
             </control>
             <control type="image">
-                <texture>nuvioarc/vignette.png</texture>
+                <texture>lucent/vignette.png</texture>
                 <colordiffuse>99000000</colordiffuse>
             </control>
         </control>
@@ -89,8 +89,8 @@
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
                     <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="32" colordiffuse="FFFFFFFF">nuvioarc/pill64.png</texturefocus>
-                    <texturenofocus border="32" colordiffuse="24FFFFFF">nuvioarc/pill64.png</texturenofocus>
+                    <texturefocus border="32" colordiffuse="FFFFFFFF">lucent/pill64.png</texturefocus>
+                    <texturenofocus border="32" colordiffuse="24FFFFFF">lucent/pill64.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$ADDON[plugin.video.seren 30469][/B]</label>
                 </control>
@@ -103,8 +103,8 @@
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
                     <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="32" colordiffuse="FFFFFFFF">nuvioarc/pill64.png</texturefocus>
-                    <texturenofocus border="32" colordiffuse="24FFFFFF">nuvioarc/pill64.png</texturenofocus>
+                    <texturefocus border="32" colordiffuse="FFFFFFFF">lucent/pill64.png</texturefocus>
+                    <texturenofocus border="32" colordiffuse="24FFFFFF">lucent/pill64.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$ADDON[plugin.video.seren 30459][/B]</label>
                 </control>
@@ -126,15 +126,15 @@
                 <top>-40</top>
                 <width>1064</width>
                 <height>1048</height>
-                <texture border="88">nuvioarc/panel_shadow.png</texture>
+                <texture border="88">lucent/panel_shadow.png</texture>
                 <colordiffuse>99000000</colordiffuse>
             </control>
             <control type="image">
-                <texture border="48">nuvioarc/panel.png</texture>
+                <texture border="48">lucent/panel.png</texture>
                 <colordiffuse>E0162532</colordiffuse>
             </control>
             <control type="image">
-                <texture border="48">nuvioarc/panel_edge.png</texture>
+                <texture border="48">lucent/panel_edge.png</texture>
                 <colordiffuse>2EFFFFFF</colordiffuse>
             </control>
 
@@ -152,7 +152,7 @@
                 <top>96</top>
                 <width>904</width>
                 <height>1</height>
-                <texture>nuvioarc/white.png</texture>
+                <texture>lucent/white.png</texture>
                 <colordiffuse>1AFFFFFF</colordiffuse>
             </control>
 
@@ -164,9 +164,9 @@
                 <onleft>1000</onleft>
                 <showonepage>false</showonepage>
                 <orientation>vertical</orientation>
-                <texturesliderbackground colordiffuse="14FFFFFF" border="3">nuvioarc/pill6.png</texturesliderbackground>
-                <texturesliderbar colordiffuse="4DFFFFFF" border="3">nuvioarc/pill6.png</texturesliderbar>
-                <texturesliderbarfocus colordiffuse="FFFFFFFF" border="3">nuvioarc/pill6.png</texturesliderbarfocus>
+                <texturesliderbackground colordiffuse="14FFFFFF" border="3">lucent/pill6.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="4DFFFFFF" border="3">lucent/pill6.png</texturesliderbar>
+                <texturesliderbarfocus colordiffuse="FFFFFFFF" border="3">lucent/pill6.png</texturesliderbarfocus>
             </control>
 
             <control type="list" id="1000">
@@ -187,7 +187,7 @@
                     <width>904</width>
                     <height>124</height>
                     <control type="image">
-                        <texture border="32">nuvioarc/card.png</texture>
+                        <texture border="32">lucent/card.png</texture>
                         <colordiffuse>0FFFFFFF</colordiffuse>
                     </control>
 
@@ -197,7 +197,7 @@
                         <top>20</top>
                         <width>124</width>
                         <height>42</height>
-                        <texture border="21">nuvioarc/pill42.png</texture>
+                        <texture border="21">lucent/pill42.png</texture>
                         <colordiffuse>1AFFFFFF</colordiffuse>
                     </control>
                     <control type="label">
@@ -229,14 +229,14 @@
                         <width>712</width>
                         <height>6</height>
                         <control type="image">
-                            <texture border="3">nuvioarc/pill6.png</texture>
+                            <texture border="3">lucent/pill6.png</texture>
                             <colordiffuse>1FFFFFFF</colordiffuse>
                         </control>
                         <control type="image">
                             <left>0</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),5)</visible>
                         </control>
@@ -244,7 +244,7 @@
                             <left>35</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),10)</visible>
                         </control>
@@ -252,7 +252,7 @@
                             <left>70</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),15)</visible>
                         </control>
@@ -260,7 +260,7 @@
                             <left>105</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),20)</visible>
                         </control>
@@ -268,7 +268,7 @@
                             <left>140</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),25)</visible>
                         </control>
@@ -276,7 +276,7 @@
                             <left>175</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),30)</visible>
                         </control>
@@ -284,7 +284,7 @@
                             <left>210</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),35)</visible>
                         </control>
@@ -292,7 +292,7 @@
                             <left>245</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),40)</visible>
                         </control>
@@ -300,7 +300,7 @@
                             <left>280</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),45)</visible>
                         </control>
@@ -308,7 +308,7 @@
                             <left>315</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),50)</visible>
                         </control>
@@ -316,7 +316,7 @@
                             <left>350</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),55)</visible>
                         </control>
@@ -324,7 +324,7 @@
                             <left>385</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),60)</visible>
                         </control>
@@ -332,7 +332,7 @@
                             <left>420</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),65)</visible>
                         </control>
@@ -340,7 +340,7 @@
                             <left>455</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),70)</visible>
                         </control>
@@ -348,7 +348,7 @@
                             <left>490</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),75)</visible>
                         </control>
@@ -356,7 +356,7 @@
                             <left>525</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),80)</visible>
                         </control>
@@ -364,7 +364,7 @@
                             <left>560</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),85)</visible>
                         </control>
@@ -372,7 +372,7 @@
                             <left>595</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),90)</visible>
                         </control>
@@ -380,7 +380,7 @@
                             <left>630</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),95)</visible>
                         </control>
@@ -388,7 +388,7 @@
                             <left>665</left>
                             <width>47</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),100)</visible>
                         </control>
@@ -424,7 +424,7 @@
                     <width>904</width>
                     <height>124</height>
                     <control type="image">
-                        <texture border="32">nuvioarc/card.png</texture>
+                        <texture border="32">lucent/card.png</texture>
                         <colordiffuse>1AFFFFFF</colordiffuse>
                     </control>
 
@@ -434,7 +434,7 @@
                         <top>20</top>
                         <width>124</width>
                         <height>42</height>
-                        <texture border="21">nuvioarc/pill42.png</texture>
+                        <texture border="21">lucent/pill42.png</texture>
                         <colordiffuse>1AFFFFFF</colordiffuse>
                     </control>
                     <control type="label">
@@ -466,14 +466,14 @@
                         <width>712</width>
                         <height>6</height>
                         <control type="image">
-                            <texture border="3">nuvioarc/pill6.png</texture>
+                            <texture border="3">lucent/pill6.png</texture>
                             <colordiffuse>1FFFFFFF</colordiffuse>
                         </control>
                         <control type="image">
                             <left>0</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),5)</visible>
                         </control>
@@ -481,7 +481,7 @@
                             <left>35</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),10)</visible>
                         </control>
@@ -489,7 +489,7 @@
                             <left>70</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),15)</visible>
                         </control>
@@ -497,7 +497,7 @@
                             <left>105</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),20)</visible>
                         </control>
@@ -505,7 +505,7 @@
                             <left>140</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),25)</visible>
                         </control>
@@ -513,7 +513,7 @@
                             <left>175</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),30)</visible>
                         </control>
@@ -521,7 +521,7 @@
                             <left>210</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),35)</visible>
                         </control>
@@ -529,7 +529,7 @@
                             <left>245</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),40)</visible>
                         </control>
@@ -537,7 +537,7 @@
                             <left>280</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),45)</visible>
                         </control>
@@ -545,7 +545,7 @@
                             <left>315</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),50)</visible>
                         </control>
@@ -553,7 +553,7 @@
                             <left>350</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),55)</visible>
                         </control>
@@ -561,7 +561,7 @@
                             <left>385</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),60)</visible>
                         </control>
@@ -569,7 +569,7 @@
                             <left>420</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),65)</visible>
                         </control>
@@ -577,7 +577,7 @@
                             <left>455</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),70)</visible>
                         </control>
@@ -585,7 +585,7 @@
                             <left>490</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),75)</visible>
                         </control>
@@ -593,7 +593,7 @@
                             <left>525</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),80)</visible>
                         </control>
@@ -601,7 +601,7 @@
                             <left>560</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),85)</visible>
                         </control>
@@ -609,7 +609,7 @@
                             <left>595</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),90)</visible>
                         </control>
@@ -617,7 +617,7 @@
                             <left>630</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),95)</visible>
                         </control>
@@ -625,7 +625,7 @@
                             <left>665</left>
                             <width>47</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>B3FFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),100)</visible>
                         </control>
@@ -666,15 +666,15 @@
                         <top>-24</top>
                         <width>952</width>
                         <height>172</height>
-                        <texture border="56">nuvioarc/card_glow.png</texture>
+                        <texture border="56">lucent/card_glow.png</texture>
                         <colordiffuse>66D6F0FF</colordiffuse>
                     </control>
                     <control type="image">
-                        <texture border="32">nuvioarc/card.png</texture>
+                        <texture border="32">lucent/card.png</texture>
                         <colordiffuse>FF2C3E4C</colordiffuse>
                     </control>
                     <control type="image">
-                        <texture border="32">nuvioarc/card_edge.png</texture>
+                        <texture border="32">lucent/card_edge.png</texture>
                         <colordiffuse>F2FFFFFF</colordiffuse>
                     </control>
 
@@ -684,7 +684,7 @@
                         <top>20</top>
                         <width>124</width>
                         <height>42</height>
-                        <texture border="21">nuvioarc/pill42.png</texture>
+                        <texture border="21">lucent/pill42.png</texture>
                         <colordiffuse>FFFFFFFF</colordiffuse>
                     </control>
                     <control type="label">
@@ -717,14 +717,14 @@
                         <width>712</width>
                         <height>6</height>
                         <control type="image">
-                            <texture border="3">nuvioarc/pill6.png</texture>
+                            <texture border="3">lucent/pill6.png</texture>
                             <colordiffuse>1FFFFFFF</colordiffuse>
                         </control>
                         <control type="image">
                             <left>0</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),5)</visible>
                         </control>
@@ -732,7 +732,7 @@
                             <left>35</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),10)</visible>
                         </control>
@@ -740,7 +740,7 @@
                             <left>70</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),15)</visible>
                         </control>
@@ -748,7 +748,7 @@
                             <left>105</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),20)</visible>
                         </control>
@@ -756,7 +756,7 @@
                             <left>140</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),25)</visible>
                         </control>
@@ -764,7 +764,7 @@
                             <left>175</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),30)</visible>
                         </control>
@@ -772,7 +772,7 @@
                             <left>210</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),35)</visible>
                         </control>
@@ -780,7 +780,7 @@
                             <left>245</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),40)</visible>
                         </control>
@@ -788,7 +788,7 @@
                             <left>280</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),45)</visible>
                         </control>
@@ -796,7 +796,7 @@
                             <left>315</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),50)</visible>
                         </control>
@@ -804,7 +804,7 @@
                             <left>350</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),55)</visible>
                         </control>
@@ -812,7 +812,7 @@
                             <left>385</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),60)</visible>
                         </control>
@@ -820,7 +820,7 @@
                             <left>420</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),65)</visible>
                         </control>
@@ -828,7 +828,7 @@
                             <left>455</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),70)</visible>
                         </control>
@@ -836,7 +836,7 @@
                             <left>490</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),75)</visible>
                         </control>
@@ -844,7 +844,7 @@
                             <left>525</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),80)</visible>
                         </control>
@@ -852,7 +852,7 @@
                             <left>560</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),85)</visible>
                         </control>
@@ -860,7 +860,7 @@
                             <left>595</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),90)</visible>
                         </control>
@@ -868,7 +868,7 @@
                             <left>630</left>
                             <width>35</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),95)</visible>
                         </control>
@@ -876,7 +876,7 @@
                             <left>665</left>
                             <width>47</width>
                             <height>6</height>
-                            <texture>nuvioarc/white.png</texture>
+                            <texture>lucent/white.png</texture>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),100)</visible>
                         </control>

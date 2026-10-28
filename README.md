@@ -91,7 +91,7 @@ Go to **Tools → Open Settings Menu → Interface → Switch Theme** and choose
 
 ### Works with these Kodi skins
 
-The theme only uses the font names every skin has (or that Kodi falls back on), and keeps all its own images in a separate `nuvioarc/` folder, so they never clash with your skin's images. Tested against the font files of:
+The theme only uses the font names every skin has (or that Kodi falls back on), and keeps all its own images in a separate `lucent/` folder, so they never clash with your skin's images. Tested against the font files of:
 
 | Skin | | Skin | |
 |---|---|---|---|
@@ -119,7 +119,7 @@ resources/
     ├── meta.json              theme name and version
     └── Default/
         ├── 1080i/             the windows (XML)
-        └── media/nuvioarc/    textures
+        └── media/lucent/    textures
             └── flags/         the badges
 screenshots/                   images for this README
 ```

@@ -13,7 +13,7 @@
         <!-- ============ Cinematic backdrop ============ -->
         <control type="group">
             <control type="image">
-                <texture>nuvioarc/white.png</texture>
+                <texture>lucent/white.png</texture>
                 <colordiffuse>FF0B1119</colordiffuse>
             </control>
             <control type="image">
@@ -23,17 +23,17 @@
             </control>
             <control type="image">
                 <width>1500</width>
-                <texture>nuvioarc/grad_left.png</texture>
+                <texture>lucent/grad_left.png</texture>
                 <colordiffuse>F50B1119</colordiffuse>
             </control>
             <control type="image">
                 <top>440</top>
                 <height>640</height>
-                <texture>nuvioarc/grad_bottom.png</texture>
+                <texture>lucent/grad_bottom.png</texture>
                 <colordiffuse>FF0B1119</colordiffuse>
             </control>
             <control type="image">
-                <texture>nuvioarc/vignette.png</texture>
+                <texture>lucent/vignette.png</texture>
                 <colordiffuse>99000000</colordiffuse>
             </control>
         </control>
@@ -123,15 +123,15 @@
                 <top>-40</top>
                 <width>920</width>
                 <height>404</height>
-                <texture border="88">nuvioarc/panel_shadow.png</texture>
+                <texture border="88">lucent/panel_shadow.png</texture>
                 <colordiffuse>80000000</colordiffuse>
             </control>
             <control type="image">
-                <texture border="48">nuvioarc/panel.png</texture>
+                <texture border="48">lucent/panel.png</texture>
                 <colordiffuse>E0162532</colordiffuse>
             </control>
             <control type="image">
-                <texture border="48">nuvioarc/panel_edge.png</texture>
+                <texture border="48">lucent/panel_edge.png</texture>
                 <colordiffuse>2EFFFFFF</colordiffuse>
             </control>
 
@@ -163,14 +163,14 @@
                 <width>760</width>
                 <height>6</height>
                 <control type="image">
-                    <texture border="3">nuvioarc/pill6.png</texture>
+                    <texture border="3">lucent/pill6.png</texture>
                     <colordiffuse>1FFFFFFF</colordiffuse>
                 </control>
                 <control type="image">
                     <left>0</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),5)</visible>
@@ -179,7 +179,7 @@
                     <left>38</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),10)</visible>
@@ -188,7 +188,7 @@
                     <left>76</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),15)</visible>
@@ -197,7 +197,7 @@
                     <left>114</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),20)</visible>
@@ -206,7 +206,7 @@
                     <left>152</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),25)</visible>
@@ -215,7 +215,7 @@
                     <left>190</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),30)</visible>
@@ -224,7 +224,7 @@
                     <left>228</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),35)</visible>
@@ -233,7 +233,7 @@
                     <left>266</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),40)</visible>
@@ -242,7 +242,7 @@
                     <left>304</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),45)</visible>
@@ -251,7 +251,7 @@
                     <left>342</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),50)</visible>
@@ -260,7 +260,7 @@
                     <left>380</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),55)</visible>
@@ -269,7 +269,7 @@
                     <left>418</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),60)</visible>
@@ -278,7 +278,7 @@
                     <left>456</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),65)</visible>
@@ -287,7 +287,7 @@
                     <left>494</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),70)</visible>
@@ -296,7 +296,7 @@
                     <left>532</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),75)</visible>
@@ -305,7 +305,7 @@
                     <left>570</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),80)</visible>
@@ -314,7 +314,7 @@
                     <left>608</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),85)</visible>
@@ -323,7 +323,7 @@
                     <left>646</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),90)</visible>
@@ -332,7 +332,7 @@
                     <left>684</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),95)</visible>
@@ -341,7 +341,7 @@
                     <left>722</left>
                     <width>38</width>
                     <height>6</height>
-                    <texture>nuvioarc/white.png</texture>
+                    <texture>lucent/white.png</texture>
                     <colordiffuse>FFFFFFFF</colordiffuse>
                     <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                     <visible>Integer.IsGreaterOrEqual(Window().Property(progress),100)</visible>
@@ -364,8 +364,8 @@
                         <aligny>center</aligny>
                         <textcolor>FFDCE2E7</textcolor>
                         <disabledcolor>FFDCE2E7</disabledcolor>
-                        <texturenofocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturenofocus>
-                        <texturefocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturefocus>
+                        <texturenofocus border="24" colordiffuse="1AFFFFFF">lucent/pill48.png</texturenofocus>
+                        <texturefocus border="24" colordiffuse="1AFFFFFF">lucent/pill48.png</texturefocus>
                         <enable>false</enable>
                         <label>[B]4K[/B]   $INFO[Window().Property(totals_4K)]</label>
                     </control>
@@ -377,8 +377,8 @@
                         <aligny>center</aligny>
                         <textcolor>FFDCE2E7</textcolor>
                         <disabledcolor>FFDCE2E7</disabledcolor>
-                        <texturenofocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturenofocus>
-                        <texturefocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturefocus>
+                        <texturenofocus border="24" colordiffuse="1AFFFFFF">lucent/pill48.png</texturenofocus>
+                        <texturefocus border="24" colordiffuse="1AFFFFFF">lucent/pill48.png</texturefocus>
                         <enable>false</enable>
                         <label>[B]1080p[/B]   $INFO[Window().Property(totals_1080p)]</label>
                     </control>
@@ -390,8 +390,8 @@
                         <aligny>center</aligny>
                         <textcolor>FFDCE2E7</textcolor>
                         <disabledcolor>FFDCE2E7</disabledcolor>
-                        <texturenofocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturenofocus>
-                        <texturefocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturefocus>
+                        <texturenofocus border="24" colordiffuse="1AFFFFFF">lucent/pill48.png</texturenofocus>
+                        <texturefocus border="24" colordiffuse="1AFFFFFF">lucent/pill48.png</texturefocus>
                         <enable>false</enable>
                         <label>[B]720p[/B]   $INFO[Window().Property(totals_720p)]</label>
                     </control>
@@ -403,8 +403,8 @@
                         <aligny>center</aligny>
                         <textcolor>FFDCE2E7</textcolor>
                         <disabledcolor>FFDCE2E7</disabledcolor>
-                        <texturenofocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturenofocus>
-                        <texturefocus border="24" colordiffuse="1AFFFFFF">nuvioarc/pill48.png</texturefocus>
+                        <texturenofocus border="24" colordiffuse="1AFFFFFF">lucent/pill48.png</texturenofocus>
+                        <texturefocus border="24" colordiffuse="1AFFFFFF">lucent/pill48.png</texturefocus>
                         <enable>false</enable>
                         <label>[B]SD[/B]   $INFO[Window().Property(totals_SD)]</label>
                     </control>
