@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Lucent theme for Seren - Download manager -->
 <window type="dialog">
+    <!-- colours: the Lucent skin's own (its colour theme) or Lucent's default glass colours -->
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,on_focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,glow,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,FFFFFFFF,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,FF0B1119,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,66D6F0FF,home)</onload>
     <coordinates>
         <left>0</left>
         <top>0</top>
@@ -72,6 +79,11 @@
                 <visible>!Integer.IsGreater(Container(1000).NumItems,0)</visible>
             </control>
 
+            <control type="grouplist" id="2100"><top>700</top><width>720</width><height>64</height><orientation>horizontal</orientation><itemgap>16</itemgap><onright>1000</onright><onup>1000</onup><ondown>2000</ondown>
+                <control type="button" id="2002"><width>auto</width><height>64</height><font>font12</font><textoffsetx>30</textoffsetx><align>center</align><aligny>center</aligny><textcolor>FFFFFFFF</textcolor><focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor><texturefocus border="32" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill64.png</texturefocus><texturenofocus border="32" colordiffuse="24FFFFFF">lucent/pill64.png</texturenofocus><pulseonselect>false</pulseonselect><label>$ADDON[plugin.video.seren 31192]</label></control>
+                <control type="button" id="2005"><width>auto</width><height>64</height><font>font12</font><textoffsetx>30</textoffsetx><align>center</align><aligny>center</aligny><textcolor>FFFFFFFF</textcolor><focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor><texturefocus border="32" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill64.png</texturefocus><texturenofocus border="32" colordiffuse="24FFFFFF">lucent/pill64.png</texturenofocus><pulseonselect>false</pulseonselect><label>$ADDON[plugin.video.seren 31194]</label></control>
+                <control type="button" id="2004"><width>auto</width><height>64</height><font>font12</font><textoffsetx>30</textoffsetx><align>center</align><aligny>center</aligny><textcolor>FFFFFFFF</textcolor><focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor><texturefocus border="32" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill64.png</texturefocus><texturenofocus border="32" colordiffuse="24FFFFFF">lucent/pill64.png</texturenofocus><pulseonselect>false</pulseonselect><label>$ADDON[plugin.video.seren 31195]</label></control>
+            </control>
             <control type="grouplist" id="2000">
                 <top>780</top>
                 <width>720</width>
@@ -79,7 +91,7 @@
                 <orientation>horizontal</orientation>
                 <itemgap>16</itemgap>
                 <onright>1000</onright>
-                <onup>1000</onup>
+                <onup>2100</onup>
                 <control type="button" id="2001">
                     <width>auto</width>
                     <height>64</height>
@@ -88,8 +100,8 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
-                    <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="32" colordiffuse="FFFFFFFF">lucent/pill64.png</texturefocus>
+                    <focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor>
+                    <texturefocus border="32" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill64.png</texturefocus>
                     <texturenofocus border="32" colordiffuse="24FFFFFF">lucent/pill64.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$ADDON[plugin.video.seren 30469][/B]</label>
@@ -102,8 +114,8 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
-                    <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="32" colordiffuse="FFFFFFFF">lucent/pill64.png</texturefocus>
+                    <focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor>
+                    <texturefocus border="32" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill64.png</texturefocus>
                     <texturenofocus border="32" colordiffuse="24FFFFFF">lucent/pill64.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$ADDON[plugin.video.seren 30459][/B]</label>
@@ -166,7 +178,7 @@
                 <orientation>vertical</orientation>
                 <texturesliderbackground colordiffuse="14FFFFFF" border="3">lucent/pill6.png</texturesliderbackground>
                 <texturesliderbar colordiffuse="4DFFFFFF" border="3">lucent/pill6.png</texturesliderbar>
-                <texturesliderbarfocus colordiffuse="FFFFFFFF" border="3">lucent/pill6.png</texturesliderbarfocus>
+                <texturesliderbarfocus colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]" border="3">lucent/pill6.png</texturesliderbarfocus>
             </control>
 
             <control type="list" id="1000">
@@ -667,7 +679,7 @@
                         <width>952</width>
                         <height>172</height>
                         <texture border="56">lucent/card_glow.png</texture>
-                        <colordiffuse>66D6F0FF</colordiffuse>
+                        <colordiffuse>$INFO[Window(Home).Property(lucent.seren.glow)]</colordiffuse><visible>!Skin.HasSetting(lucent.lite)</visible>
                     </control>
                     <control type="image">
                         <texture border="32">lucent/card.png</texture>
@@ -675,7 +687,7 @@
                     </control>
                     <control type="image">
                         <texture border="32">lucent/card_edge.png</texture>
-                        <colordiffuse>F2FFFFFF</colordiffuse>
+                        <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                     </control>
 
                     <!-- Percentage badge -->
@@ -685,7 +697,7 @@
                         <width>124</width>
                         <height>42</height>
                         <texture border="21">lucent/pill42.png</texture>
-                        <colordiffuse>FFFFFFFF</colordiffuse>
+                        <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                     </control>
                     <control type="label">
                         <left>20</left>
@@ -695,7 +707,7 @@
                         <font>font12</font>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <textcolor>FF0B1119</textcolor>
+                        <textcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</textcolor>
                         <label>[B]$INFO[ListItem.Property(progress),,%][/B]</label>
                     </control>
 
@@ -725,7 +737,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),5)</visible>
                         </control>
                         <control type="image">
@@ -733,7 +745,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),10)</visible>
                         </control>
                         <control type="image">
@@ -741,7 +753,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),15)</visible>
                         </control>
                         <control type="image">
@@ -749,7 +761,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),20)</visible>
                         </control>
                         <control type="image">
@@ -757,7 +769,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),25)</visible>
                         </control>
                         <control type="image">
@@ -765,7 +777,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),30)</visible>
                         </control>
                         <control type="image">
@@ -773,7 +785,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),35)</visible>
                         </control>
                         <control type="image">
@@ -781,7 +793,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),40)</visible>
                         </control>
                         <control type="image">
@@ -789,7 +801,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),45)</visible>
                         </control>
                         <control type="image">
@@ -797,7 +809,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),50)</visible>
                         </control>
                         <control type="image">
@@ -805,7 +817,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),55)</visible>
                         </control>
                         <control type="image">
@@ -813,7 +825,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),60)</visible>
                         </control>
                         <control type="image">
@@ -821,7 +833,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),65)</visible>
                         </control>
                         <control type="image">
@@ -829,7 +841,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),70)</visible>
                         </control>
                         <control type="image">
@@ -837,7 +849,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),75)</visible>
                         </control>
                         <control type="image">
@@ -845,7 +857,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),80)</visible>
                         </control>
                         <control type="image">
@@ -853,7 +865,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),85)</visible>
                         </control>
                         <control type="image">
@@ -861,7 +873,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),90)</visible>
                         </control>
                         <control type="image">
@@ -869,7 +881,7 @@
                             <width>35</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),95)</visible>
                         </control>
                         <control type="image">
@@ -877,7 +889,7 @@
                             <width>47</width>
                             <height>6</height>
                             <texture>lucent/white.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                             <visible>Integer.IsGreaterOrEqual(ListItem.Property(progress),100)</visible>
                         </control>
                     </control>

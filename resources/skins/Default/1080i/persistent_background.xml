@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Lucent theme for Seren - Persistent background -->
 <window type="dialog">
+    <!-- colours: the Lucent skin's own (its colour theme) or Lucent's default glass colours -->
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,on_focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,glow,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,FFFFFFFF,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,FF0B1119,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,66D6F0FF,home)</onload>
     <coordinates>
         <left>0</left>
         <top>0</top>
@@ -19,6 +26,7 @@
             <control type="image">
                 <aspectratio>scale</aspectratio>
                 <texture background="true">$INFO[Window().Property(item.art.fanart)]</texture>
+                <animation effect="zoom" start="100" end="110" center="960,540" time="24000" tween="sine" easing="inout" reversible="false" condition="!Skin.HasSetting(lucent.lite)">Conditional</animation>
             </control>
             <control type="image">
                 <width>1500</width>

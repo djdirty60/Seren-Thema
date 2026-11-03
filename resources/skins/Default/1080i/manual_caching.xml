@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Lucent theme for Seren - Manual caching (uncached torrents) -->
 <window type="dialog">
+    <!-- colours: the Lucent skin's own (its colour theme) or Lucent's default glass colours -->
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,on_focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,glow,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,FFFFFFFF,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,FF0B1119,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,66D6F0FF,home)</onload>
     <coordinates>
         <left>0</left>
         <top>0</top>
@@ -197,17 +204,19 @@
                 <onright>1000</onright>
                 <onup>1000</onup>
 
+                <control type="button" id="2002"><width>auto</width><height>64</height><font>font12</font><textoffsetx>22</textoffsetx><align>center</align><aligny>center</aligny><textcolor>FFFFFFFF</textcolor><focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor><texturefocus border="32" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill64.png</texturefocus><texturenofocus border="32" colordiffuse="24FFFFFF">lucent/pill64.png</texturenofocus><pulseonselect>false</pulseonselect><label>[B]$INFO[Window().Property(filter.label)][/B]</label><visible>!String.IsEmpty(Window().Property(filter.label))</visible></control>
+
                 <!-- Close -->
                 <control type="button" id="2999">
                     <width>auto</width>
                     <height>64</height>
                     <font>font12</font>
-                    <textoffsetx>30</textoffsetx>
+                    <textoffsetx>22</textoffsetx>
                     <align>center</align>
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
-                    <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="32" colordiffuse="FFFFFFFF">lucent/pill64.png</texturefocus>
+                    <focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor>
+                    <texturefocus border="32" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill64.png</texturefocus>
                     <texturenofocus border="32" colordiffuse="24FFFFFF">lucent/pill64.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$INFO[Window().Property(close.text)][/B]</label>
@@ -286,7 +295,7 @@
                 <orientation>vertical</orientation>
                 <texturesliderbackground colordiffuse="14FFFFFF" border="3">lucent/pill6.png</texturesliderbackground>
                 <texturesliderbar colordiffuse="4DFFFFFF" border="3">lucent/pill6.png</texturesliderbar>
-                <texturesliderbarfocus colordiffuse="FFFFFFFF" border="3">lucent/pill6.png</texturesliderbarfocus>
+                <texturesliderbarfocus colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]" border="3">lucent/pill6.png</texturesliderbarfocus>
             </control>
 
             <!-- Stream list -->
@@ -367,7 +376,7 @@
                             <height>34</height>
                             <font>font12</font>
                             <textcolor>FF8F9BA6</textcolor>
-                            <label>[UPPERCASE]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,]$INFO[ListItem.Property(seeds),  ·  , SEEDS][/UPPERCASE]</label>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(aio_imax),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_fel),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_lang),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_nlsubs),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,]$INFO[ListItem.Property(seeds),  ·  , SEEDS][/UPPERCASE]</label>
                         </control>
                         <!-- Codec info -->
                         <!-- Media info badges -->
@@ -426,36 +435,180 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>96</left>
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>192</left>
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>288</left>
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>0</left>
@@ -671,7 +824,7 @@
                             <height>34</height>
                             <font>font12</font>
                             <textcolor>FF8F9BA6</textcolor>
-                            <label>[UPPERCASE]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,]$INFO[ListItem.Property(seeds),  ·  , SEEDS][/UPPERCASE]</label>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(aio_imax),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_fel),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_lang),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_nlsubs),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,]$INFO[ListItem.Property(seeds),  ·  , SEEDS][/UPPERCASE]</label>
                         </control>
                         <!-- Media info badges -->
                         <control type="group">
@@ -729,36 +882,180 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>96</left>
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>192</left>
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>288</left>
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>0</left>
@@ -933,7 +1230,7 @@
                             <width>952</width>
                             <height>172</height>
                             <texture border="56">lucent/card_glow.png</texture>
-                            <colordiffuse>66D6F0FF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.glow)]</colordiffuse><visible>!Skin.HasSetting(lucent.lite)</visible>
                         </control>
                         <!-- Body -->
                         <control type="image">
@@ -943,7 +1240,7 @@
                         <!-- Edge -->
                         <control type="image">
                             <texture border="32">lucent/card_edge.png</texture>
-                            <colordiffuse>F2FFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                         </control>
 
                         <!-- Quality badge (accent) -->
@@ -953,7 +1250,7 @@
                             <width>124</width>
                             <height>42</height>
                             <texture border="21">lucent/pill42.png</texture>
-                            <colordiffuse>FFFFFFFF</colordiffuse>
+                            <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                         </control>
                         <control type="label">
                             <left>20</left>
@@ -963,7 +1260,7 @@
                             <font>font12</font>
                             <align>center</align>
                             <aligny>center</aligny>
-                            <textcolor>FF0B1119</textcolor>
+                            <textcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</textcolor>
                             <label>[B]$INFO[ListItem.Property(quality)][/B]</label>
                         </control>
                         <control type="image">
@@ -994,7 +1291,8 @@
                             <height>34</height>
                             <font>font12</font>
                             <textcolor>FFDCE2E7</textcolor>
-                            <label>[UPPERCASE]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,]$INFO[ListItem.Property(seeds),  ·  , SEEDS][/UPPERCASE]</label>
+                            <scroll>true</scroll>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(aio_imax),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_fel),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_lang),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_nlsubs),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,]$INFO[ListItem.Property(seeds),  ·  , SEEDS][/UPPERCASE]</label>
                         </control>
                         <!-- Media info badges -->
                         <control type="group">
@@ -1052,36 +1350,180 @@
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>96</left>
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>96</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>192</left>
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>192</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))] | [!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>288</left>
                                 <width>88</width>
                                 <height>34</height>
                                 <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/CAM.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + String.Contains(ListItem.Property(info.misc_text),CAM)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/SCR.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + String.Contains(ListItem.Property(info.misc_text),SCR)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/HC.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + String.Contains(ListItem.Property(info.misc_text),HC)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/REMUX.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
+                            </control>
+                                                        <control type="image">
+                                <left>288</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.misc_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]]</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.misc_1)) + [[!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + !String.IsEmpty(ListItem.Property(info.hdrcodec_2)) + !String.IsEmpty(ListItem.Property(info.videocodec_1))]] + !String.Contains(ListItem.Property(info.misc_text),CAM) + !String.Contains(ListItem.Property(info.misc_text),SCR) + !String.Contains(ListItem.Property(info.misc_text),HC) + !String.Contains(ListItem.Property(info.misc_text),REMUX)</visible>
                             </control>
                             <control type="image">
                                 <left>0</left>

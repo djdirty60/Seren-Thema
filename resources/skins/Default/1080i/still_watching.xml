@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Lucent theme for Seren - $ADDON[plugin.video.seren 30559] -->
 <window>
+    <!-- colours: the Lucent skin's own (its colour theme) or Lucent's default glass colours -->
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,on_focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,glow,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,FFFFFFFF,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,FF0B1119,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,66D6F0FF,home)</onload>
     <onload>Dialog.Close(fullscreeninfo,true)</onload>
     <onload>Dialog.Close(videoosd,true)</onload>
     <defaultcontrol always="true">3001</defaultcontrol>
@@ -124,8 +131,8 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
-                    <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="30" colordiffuse="FFFFFFFF">lucent/pill60.png</texturefocus>
+                    <focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor>
+                    <texturefocus border="30" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill60.png</texturefocus>
                     <texturenofocus border="30" colordiffuse="24FFFFFF">lucent/pill60.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$ADDON[plugin.video.seren 30560][/B]</label>
@@ -138,8 +145,8 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
-                    <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="30" colordiffuse="FFFFFFFF">lucent/pill60.png</texturefocus>
+                    <focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor>
+                    <texturefocus border="30" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill60.png</texturefocus>
                     <texturenofocus border="30" colordiffuse="24FFFFFF">lucent/pill60.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$ADDON[plugin.video.seren 30459][/B]</label>
@@ -152,8 +159,8 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
-                    <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="30" colordiffuse="FFFFFFFF">lucent/pill60.png</texturefocus>
+                    <focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor>
+                    <texturefocus border="30" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill60.png</texturefocus>
                     <texturenofocus border="30" colordiffuse="24FFFFFF">lucent/pill60.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$ADDON[plugin.video.seren 30561][/B]</label>
@@ -171,7 +178,7 @@
                 <righttexture></righttexture>
                 <overlaytexture></overlaytexture>
                 <texturebg colordiffuse="1FFFFFFF">lucent/white.png</texturebg>
-                <midtexture colordiffuse="FFFFFFFF">lucent/white.png</midtexture>
+                <midtexture colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/white.png</midtexture>
             </control>
         </control>
     </controls>

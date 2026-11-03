@@ -16,13 +16,18 @@
 
 | Screen | What you see |
 | --- | --- |
-| **Source select** | Logo, info and plot on the left; on the right a glass panel with all streams as cards, showing quality, provider, debrid, size and badges |
-| **Scraping** | Progress bar and counts per quality (4K, 1080p, 720p, SD) and per source type |
+| **Source select** | Logo, info and plot on the left (with running time, Rotten Tomatoes and Metacritic when known, and for an episode its own picture and air date); on the right a glass panel with all streams as cards, showing quality, provider, debrid, size and badges, with CACHED (green) and language tags such as DUAL-AUDIO and MULTI-SUB in front of the provider. The first stream in Seren's own order is tagged **Recommended**. Includes Seren's *Filter results* button |
+| **Scraping** | Progress bar, counts per quality (4K, 1080p, 720p, SD) and per source type, the best quality found so far with how many streams play straight away, and a chip for every provider that is still busy (they disappear as they finish). The backdrop slowly zooms in |
 | **Resolving** | Glass card with a loading bar and the badges of the chosen stream |
-| **Playing next / Still watching?** | Glass card at the bottom right over the video, with a rounded thumbnail and a countdown bar |
+| **Playing next / Still watching?** | Glass card at the bottom right over the video, with a rounded thumbnail, the short plot and running time of the next episode, and a countdown bar. Includes Seren's *Skip outro* (anime) and *don't continue* buttons |
 | **Manual caching** | Same style as source select, including the number of seeds |
-| **Download Manager** | One card per download with percentage, progress bar, speed and time remaining |
-| **Background** | Backdrop and logo while loading |
+| **Download Manager** | One card per download with percentage, progress bar, speed and time remaining, plus pause, resume and cancel all |
+| **Filters** | Five columns (video, HDR, audio, channels, other) with a switch per feature: on = hide those streams |
+| **Sorting** | The sort rules as rows of pills: press a pill to change it, the arrow turns the order around |
+| **Provider packages** | Your scraper packages as cards with icon, version and author; install a new package |
+| **Provider settings** | The package's settings on the left, its providers as tiles with an on/off switch on the right, plus all on / all off |
+| **Skip intro** | Seren's own *Skip intro / recap / outro / preview* button as a glass pill (Seren > Settings > Playback) |
+| **Background** | Backdrop and logo while loading; the backdrop slowly zooms in |
 
 ### Badges instead of text
 
@@ -106,10 +111,18 @@ The theme only uses the font names every skin has (or that Kodi falls back on), 
 | Arctic Horizon 2 | ✅ | | |
 
 In some skins the big titles are a bit smaller, because those skins have no large font with a standard name.
-- **Not themed**: the filter, sort and provider settings windows. These keep the default Seren style.
+- **Every Seren window** is themed (the calendars, QR login and language choice of some Seren builds excepted).
+- **AIOStreams scraper**: with [seren-aiostreams-provider](https://github.com/djdirty60/seren-aiostreams-provider) the tags IMAX, FEL, NL and NL-SUBS appear in amber in front of the provider.
 - Made for Seren 3.x (Kodi 21 and 22), 1080p screen resolution.
 
 ---
+
+### Together with the Lucent skin
+
+With the Lucent skin the theme follows it:
+
+- **Colours**: the colour theme you pick in Lucent (Ocean, Rose, Gold, ...) also colours Seren's buttons, bars and focused cards. With any other skin the theme uses its own white glass look.
+- **Light mode**: when Lucent runs in light mode (boxes with little memory), the theme leaves out the glow around cards and the slowly zooming backdrop.
 
 ## Folder structure
 

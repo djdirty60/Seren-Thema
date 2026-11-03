@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Lucent theme for Seren - Volgende aflevering -->
 <window>
+    <!-- colours: the Lucent skin's own (its colour theme) or Lucent's default glass colours -->
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,on_focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,glow,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,FFFFFFFF,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,FF0B1119,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,66D6F0FF,home)</onload>
     <onload>Dialog.Close(fullscreeninfo,true)</onload>
     <onload>Dialog.Close(videoosd,true)</onload>
     <defaultcontrol always="true">3001</defaultcontrol>
@@ -10,7 +17,7 @@
             <right>64</right>
             <bottom>72</bottom>
             <width>860</width>
-            <height>292</height>
+            <height>412</height>
 
             <animation type="WindowOpen" reversible="false">
                 <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="out"/>
@@ -26,7 +33,7 @@
                 <left>-40</left>
                 <top>-40</top>
                 <width>940</width>
-                <height>372</height>
+                <height>492</height>
                 <texture border="88">lucent/panel_shadow.png</texture>
                 <colordiffuse>B3000000</colordiffuse>
             </control>
@@ -95,7 +102,7 @@
                     <height>40</height>
                     <font>font12</font>
                     <textcolor>FFDCE2E7</textcolor>
-                    <label>[B]S$INFO[Window.Property(item.info.season)] · E$INFO[Window.Property(item.info.episode)][/B]$INFO[Window.Property(item.info.rating),   ★ ,]</label>
+                    <label>[B]S$INFO[Window.Property(item.info.season)] · E$INFO[Window.Property(item.info.episode)][/B]$INFO[Window.Property(item.info.rating),   ★ ,]$INFO[Window.Property(item.info.duration.minutes),   ·   , min]</label>
                     <visible>!String.IsEmpty(Window.Property(item.info.season))</visible>
                 </control>
                 <control type="textbox">
@@ -108,15 +115,17 @@
                 </control>
             </control>
 
+            <control type="textbox"><left>28</left><top>224</top><width>804</width><height>96</height><font>font12</font><textcolor>FFBDC8D1</textcolor><label>$INFO[Window.Property(item.info.plot)]</label><autoscroll delay="5000" time="2500" repeat="6000">true</autoscroll></control>
+
             <!-- Buttons -->
             <control type="grouplist">
                 <left>28</left>
-                <top>216</top>
+                <top>334</top>
                 <width>804</width>
                 <height>60</height>
                 <orientation>horizontal</orientation>
                 <align>right</align>
-                <itemgap>14</itemgap>
+                <itemgap>10</itemgap>
                 <control type="button" id="3001">
                     <width>auto</width>
                     <height>60</height>
@@ -125,12 +134,14 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
-                    <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="30" colordiffuse="FFFFFFFF">lucent/pill60.png</texturefocus>
+                    <focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor>
+                    <texturefocus border="30" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill60.png</texturefocus>
                     <texturenofocus border="30" colordiffuse="24FFFFFF">lucent/pill60.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]▶  $ADDON[plugin.video.seren 30555][/B]</label>
                 </control>
+                <control type="button" id="3004"><width>auto</width><height>60</height><font>font12</font><textoffsetx>24</textoffsetx><align>center</align><aligny>center</aligny><textcolor>FFFFFFFF</textcolor><focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor><texturefocus border="30" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill60.png</texturefocus><texturenofocus border="30" colordiffuse="24FFFFFF">lucent/pill60.png</texturenofocus><pulseonselect>false</pulseonselect><label>[B]$ADDON[plugin.video.seren 30785][/B]</label><visible>!String.IsEmpty(Window.Property(anime.skipOutroEnd))</visible></control>
+                <control type="button" id="3003"><width>auto</width><height>60</height><font>font12</font><textoffsetx>24</textoffsetx><align>center</align><aligny>center</aligny><textcolor>FFFFFFFF</textcolor><focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor><texturefocus border="30" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill60.png</texturefocus><texturenofocus border="30" colordiffuse="24FFFFFF">lucent/pill60.png</texturenofocus><pulseonselect>false</pulseonselect><label>Niet doorspelen</label></control>
                 <control type="button" id="3002">
                     <width>auto</width>
                     <height>60</height>
@@ -139,8 +150,8 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <textcolor>FFFFFFFF</textcolor>
-                    <focusedcolor>FF0B1119</focusedcolor>
-                    <texturefocus border="30" colordiffuse="FFFFFFFF">lucent/pill60.png</texturefocus>
+                    <focusedcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</focusedcolor>
+                    <texturefocus border="30" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill60.png</texturefocus>
                     <texturenofocus border="30" colordiffuse="24FFFFFF">lucent/pill60.png</texturenofocus>
                     <pulseonselect>false</pulseonselect>
                     <label>[B]$ADDON[plugin.video.seren 30459][/B]</label>
@@ -158,7 +169,7 @@
                 <righttexture></righttexture>
                 <overlaytexture></overlaytexture>
                 <texturebg colordiffuse="1FFFFFFF">lucent/white.png</texturebg>
-                <midtexture colordiffuse="FFFFFFFF">lucent/white.png</midtexture>
+                <midtexture colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/white.png</midtexture>
             </control>
         </control>
     </controls>

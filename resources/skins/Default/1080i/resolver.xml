@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Lucent theme for Seren - Resolver (opening the chosen stream) -->
 <window type="dialog">
+    <!-- colours: the Lucent skin's own (its colour theme) or Lucent's default glass colours -->
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,on_focus,home)</onload>
+    <onload condition="!String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,glow,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.focus,FFFFFFFF,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.onfocus,FF0B1119,home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(lucent.lite.checked))">SetProperty(lucent.seren.glow,66D6F0FF,home)</onload>
     <coordinates>
         <left>0</left>
         <top>0</top>
@@ -170,7 +177,7 @@
                 <control type="image">
                     <width>220</width>
                     <texture border="3">lucent/pill6.png</texture>
-                    <colordiffuse>FFFFFFFF</colordiffuse>
+                    <colordiffuse>$INFO[Window(Home).Property(lucent.seren.focus)]</colordiffuse>
                     <animation effect="slide" start="0,0" end="800,0" time="1100" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
                 </control>
             </control>
@@ -190,10 +197,10 @@
                     <font>font12</font>
                     <textoffsetx>22</textoffsetx>
                     <aligny>center</aligny>
-                    <textcolor>FF0B1119</textcolor>
-                    <disabledcolor>FF0B1119</disabledcolor>
-                    <texturenofocus border="24" colordiffuse="FFFFFFFF">lucent/pill48.png</texturenofocus>
-                    <texturefocus border="24" colordiffuse="FFFFFFFF">lucent/pill48.png</texturefocus>
+                    <textcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</textcolor>
+                    <disabledcolor>$INFO[Window(Home).Property(lucent.seren.onfocus)]</disabledcolor>
+                    <texturenofocus border="24" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill48.png</texturenofocus>
+                    <texturefocus border="24" colordiffuse="$INFO[Window(Home).Property(lucent.seren.focus)]">lucent/pill48.png</texturefocus>
                     <enable>false</enable>
                     <label>[B]$INFO[Window().Property(source_resolution)][/B]</label>
                     <visible>!String.IsEmpty(Window().Property(source_resolution))</visible>
