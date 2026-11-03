@@ -8,7 +8,7 @@
 
 ![Source select](screenshots/bronkeuze.jpg)
 
-> The images are previews with placeholder artwork. In Kodi you will see the real backdrop and logo of the movie or show.
+> Most images are screenshots of the theme running in a real Kodi, filled with placeholder titles and artwork. In Kodi you will see the real backdrop, logo and plot of the movie or show. The Resolving, Manual caching and Download Manager images are older previews.
 
 ---
 
@@ -39,14 +39,32 @@ The badges are original designs. They are not official Dolby or DTS logos.
 
 ## Screenshots
 
-**Scraping**
+**Source select** – an episode with its own picture and air date; the first stream is tagged *Recommended*, with CACHED and language tags
+![Source select](screenshots/bronkeuze.jpg)
+
+**Scraping** – counts per quality, the best result so far and the providers that are still busy
 ![Scraping](screenshots/streams-zoeken.jpg)
+
+**Filters**
+![Filters](screenshots/filters.jpg)
+
+**Sorting**
+![Sorting](screenshots/sorteren.jpg)
+
+**Provider packages**
+![Provider packages](screenshots/provider-pakketten.jpg)
+
+**Provider settings**
+![Provider settings](screenshots/provider-instellingen.jpg)
+
+**Playing next** – with the plot and running time of the next episode
+![Playing next](screenshots/volgende-aflevering.jpg)
+
+**Skip intro**
+![Skip intro](screenshots/intro-overslaan.jpg)
 
 **Resolving**
 ![Resolving](screenshots/stream-openen.jpg)
-
-**Playing next**
-![Playing next](screenshots/volgende-aflevering.jpg)
 
 **Manual caching**
 ![Manual caching](screenshots/handmatig-cachen.jpg)
