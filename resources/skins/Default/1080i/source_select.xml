@@ -402,6 +402,17 @@
                             <visible>String.IsEqual(ListItem.CurrentItem,1)</visible>
                         </control>
                         <!-- Provider · debrid · type · size -->
+                        <!-- AIOStreams tags as badges (IMAX, FEL/P7, NL/MULTI, NL-SUBS) -->
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_imax)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_imax)) + [true]</visible></control>
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_fel)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_fel)) + [[String.IsEmpty(ListItem.Property(aio_imax))]]</visible></control>
+                        <control type="image"><left>264</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_fel)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_fel)) + [[!String.IsEmpty(ListItem.Property(aio_imax))]]</visible></control>
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_lang)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_lang)) + [[String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel))]]</visible></control>
+                        <control type="image"><left>264</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_lang)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_lang)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel))]]</visible></control>
+                        <control type="image"><left>360</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_lang)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_lang)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel))]]</visible></control>
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
+                        <control type="image"><left>264</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
+                        <control type="image"><left>360</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
+                        <control type="image"><left>456</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>99FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
                         <control type="label">
                             <left>168</left>
                             <top>46</top>
@@ -409,7 +420,48 @@
                             <height>34</height>
                             <font>font12</font>
                             <textcolor>FF8F9BA6</textcolor>
-                            <label>[UPPERCASE]$INFO[ListItem.Property(aio_imax),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_fel),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_lang),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_nlsubs),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>264</left>
+                            <top>46</top>
+                            <width>616</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FF8F9BA6</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>360</left>
+                            <top>46</top>
+                            <width>520</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FF8F9BA6</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>456</left>
+                            <top>46</top>
+                            <width>424</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FF8F9BA6</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>552</left>
+                            <top>46</top>
+                            <width>328</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FF8F9BA6</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
                         </control>
                         <!-- Codec info -->
                         <!-- Media info badges -->
@@ -864,6 +916,17 @@
                             <label>$INFO[ListItem.Property(release_title)]</label>
                             <visible>String.IsEqual(ListItem.CurrentItem,1)</visible>
                         </control>
+                        <!-- AIOStreams tags as badges (IMAX, FEL/P7, NL/MULTI, NL-SUBS) -->
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_imax)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_imax)) + [true]</visible></control>
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_fel)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_fel)) + [[String.IsEmpty(ListItem.Property(aio_imax))]]</visible></control>
+                        <control type="image"><left>264</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_fel)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_fel)) + [[!String.IsEmpty(ListItem.Property(aio_imax))]]</visible></control>
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_lang)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_lang)) + [[String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel))]]</visible></control>
+                        <control type="image"><left>264</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_lang)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_lang)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel))]]</visible></control>
+                        <control type="image"><left>360</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_lang)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_lang)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel))]]</visible></control>
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
+                        <control type="image"><left>264</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
+                        <control type="image"><left>360</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
+                        <control type="image"><left>456</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>B3FFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
                         <control type="label">
                             <left>168</left>
                             <top>46</top>
@@ -871,7 +934,48 @@
                             <height>34</height>
                             <font>font12</font>
                             <textcolor>FF8F9BA6</textcolor>
-                            <label>[UPPERCASE]$INFO[ListItem.Property(aio_imax),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_fel),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_lang),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_nlsubs),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>264</left>
+                            <top>46</top>
+                            <width>616</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FF8F9BA6</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>360</left>
+                            <top>46</top>
+                            <width>520</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FF8F9BA6</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>456</left>
+                            <top>46</top>
+                            <width>424</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FF8F9BA6</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>552</left>
+                            <top>46</top>
+                            <width>328</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FF8F9BA6</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
                         </control>
                         <!-- Media info badges -->
                         <control type="group">
@@ -1351,6 +1455,17 @@
                             <visible>String.IsEqual(ListItem.CurrentItem,1)</visible>
 
                         </control>
+                        <!-- AIOStreams tags as badges (IMAX, FEL/P7, NL/MULTI, NL-SUBS) -->
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_imax)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_imax)) + [true]</visible></control>
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_fel)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_fel)) + [[String.IsEmpty(ListItem.Property(aio_imax))]]</visible></control>
+                        <control type="image"><left>264</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_fel)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_fel)) + [[!String.IsEmpty(ListItem.Property(aio_imax))]]</visible></control>
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_lang)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_lang)) + [[String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel))]]</visible></control>
+                        <control type="image"><left>264</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_lang)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_lang)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel))]]</visible></control>
+                        <control type="image"><left>360</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_lang)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_lang)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel))]]</visible></control>
+                        <control type="image"><left>168</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
+                        <control type="image"><left>264</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
+                        <control type="image"><left>360</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
+                        <control type="image"><left>456</left><top>46</top><width>88</width><height>34</height><aspectratio>keep</aspectratio><colordiffuse>FFFFFFFF</colordiffuse><texture>lucent/flags/aio_$INFO[ListItem.Property(aio_nlsubs)].png</texture><visible>!String.IsEmpty(ListItem.Property(aio_nlsubs)) + [[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang))]]</visible></control>
                         <control type="label">
                             <left>168</left>
                             <top>46</top>
@@ -1359,7 +1474,52 @@
                             <font>font12</font>
                             <textcolor>FFDCE2E7</textcolor>
                             <scroll>true</scroll>
-                            <label>[UPPERCASE]$INFO[ListItem.Property(aio_imax),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_fel),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_lang),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(aio_nlsubs),[COLOR FFF2B84B],[/COLOR]  ·  ]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>264</left>
+                            <top>46</top>
+                            <width>616</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FFDCE2E7</textcolor>
+                            <scroll>true</scroll>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>360</left>
+                            <top>46</top>
+                            <width>520</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FFDCE2E7</textcolor>
+                            <scroll>true</scroll>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>456</left>
+                            <top>46</top>
+                            <width>424</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FFDCE2E7</textcolor>
+                            <scroll>true</scroll>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [!String.IsEmpty(ListItem.Property(aio_imax)) + String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))] | [String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
+                        </control>
+                        <control type="label">
+                            <left>552</left>
+                            <top>46</top>
+                            <width>328</width>
+                            <height>34</height>
+                            <font>font12</font>
+                            <textcolor>FFDCE2E7</textcolor>
+                            <scroll>true</scroll>
+                            <label>[UPPERCASE]$INFO[ListItem.Property(info.sourcetype_text),[COLOR FF4CC38A],[/COLOR]  ·  ]$INFO[ListItem.Property(info.audiolang_text),,  ·  ]$INFO[ListItem.Property(info.sublang_text),,  ·  ]$INFO[ListItem.Property(provider)]$INFO[ListItem.Property(debrid_provider),  ·  ,]$INFO[ListItem.Property(type),  ·  ,]$INFO[ListItem.Property(size),  ·  ,][/UPPERCASE]</label>
+                            <visible>[!String.IsEmpty(ListItem.Property(aio_imax)) + !String.IsEmpty(ListItem.Property(aio_fel)) + !String.IsEmpty(ListItem.Property(aio_lang)) + !String.IsEmpty(ListItem.Property(aio_nlsubs))]</visible>
                         </control>
                         <!-- Media info badges -->
                         <control type="group">

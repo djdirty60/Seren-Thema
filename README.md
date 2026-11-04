@@ -130,7 +130,7 @@ The theme only uses the font names every skin has (or that Kodi falls back on), 
 
 In some skins the big titles are a bit smaller, because those skins have no large font with a standard name.
 - **Every Seren window** is themed (the calendars, QR login and language choice of some Seren builds excepted).
-- **AIOStreams scraper**: with [seren-aiostreams-provider](https://github.com/djdirty60/seren-aiostreams-provider) the tags IMAX, FEL, NL and NL-SUBS appear in amber in front of the provider.
+- **AIOStreams scraper**: with [seren-aiostreams-provider](https://github.com/djdirty60/seren-aiostreams-provider) the tags IMAX, FEL / P7, NL / MULTI and NL-SUBS appear as coloured badges at the start of the provider line. Switch off the scraper's "Show IMAX / FEL / language tags in title" setting so they are not in the title as well.
 - Made for Seren 3.x (Kodi 21 and 22), 1080p screen resolution.
 
 ---
