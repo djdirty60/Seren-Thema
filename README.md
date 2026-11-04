@@ -82,13 +82,13 @@ The badges are original designs. They are not official Dolby or DTS logos.
 2. Under Themes, choose **Install Theme → Web Location**.
 3. Enter this address:
    ```
-   https://github.com/djdirty60/Seren-Thema/releases/latest/download/seren.theme.lucent.zip
+   https://raw.githubusercontent.com/djdirty60/Seren-Thema/main/update/seren.theme.lucent.zip
    ```
 4. Seren asks whether you want to use the theme. Choose **Yes**.
 
 ### Method 2: with a zip file
 
-1. Download `seren.theme.lucent.zip` from the [Releases page](https://github.com/djdirty60/Seren-Thema/releases).
+1. Download [`seren.theme.lucent.zip`](https://raw.githubusercontent.com/djdirty60/Seren-Thema/main/update/seren.theme.lucent.zip) (always the newest version, also in the `update` folder of this repository).
 2. Copy the file to your device, for example to the *Download* folder.
 3. In Seren, go to **Tools → Open Settings Menu → Interface → Install Theme → Browse**.
 4. Select the zip file, then choose **Yes**.

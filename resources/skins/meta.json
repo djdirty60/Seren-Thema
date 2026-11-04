@@ -2,6 +2,6 @@
   "skin_name": "Lucent",
   "version": "1.5.2",
   "author": "Claude",
-  "remote_meta": "https://github.com/djdirty60/Seren-Thema/releases/latest/download/meta.json",
-  "update_directory": "https://github.com/djdirty60/Seren-Thema/releases/latest/download/seren.theme.lucent.zip"
+  "remote_meta": "https://raw.githubusercontent.com/djdirty60/Seren-Thema/main/update/meta.json",
+  "update_directory": "https://raw.githubusercontent.com/djdirty60/Seren-Thema/main/update/seren.theme.lucent.zip"
 }
