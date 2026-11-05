@@ -33,6 +33,8 @@
 
 Instead of `DV | HDR | ATMOS`, the theme shows coloured badges, for example **Dolby Vision**, **HDR**, **HEVC**, **REMUX**, **Atmos**, **TrueHD**, **DTS:X** and **5.1 / 7.1**. There are 40 badges. Each stream only shows its own badges, neatly side by side without gaps. Low-quality releases (CAM, SCR, HC subs) are red.
 
+When the release name says Dolby Vision 2 (for example `DV2`, `DoVi2` or `Dolby.Vision.2`), the Dolby Vision badge becomes a **Dolby Vision 2** badge. Your TV does the real work; Kodi and Seren cannot see Dolby Vision 2 themselves.
+
 The badges are original designs. They are not official Dolby or DTS logos.
 
 ---

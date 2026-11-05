@@ -444,7 +444,16 @@
                                 <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.hdrcodec_1)].png</texture>
                                 <colordiffuse>99FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1))</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + ![String.IsEqual(ListItem.Property(info.hdrcodec_1),DV) + [String.Contains(ListItem.Property(release_title),.dv2.) | String.Contains(ListItem.Property(release_title),.dv2-) | String.Contains(ListItem.Property(release_title),-dv2.) | String.Contains(ListItem.Property(release_title),-dv2-) | String.Contains(ListItem.Property(release_title),dovi2.) | String.Contains(ListItem.Property(release_title),dovi2-) | String.Contains(ListItem.Property(release_title),dovi.2.) | String.Contains(ListItem.Property(release_title),dovi-2.) | String.Contains(ListItem.Property(release_title),dolby.vision.2.) | String.Contains(ListItem.Property(release_title),dolby-vision-2.) | String.Contains(ListItem.Property(release_title),dolbyvision2.) | String.Contains(ListItem.Property(release_title),dolbyvision2-)]]</visible>
+                            </control>
+                            <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/DV2.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEqual(ListItem.Property(info.hdrcodec_1),DV) + [String.Contains(ListItem.Property(release_title),.dv2.) | String.Contains(ListItem.Property(release_title),.dv2-) | String.Contains(ListItem.Property(release_title),-dv2.) | String.Contains(ListItem.Property(release_title),-dv2-) | String.Contains(ListItem.Property(release_title),dovi2.) | String.Contains(ListItem.Property(release_title),dovi2-) | String.Contains(ListItem.Property(release_title),dovi.2.) | String.Contains(ListItem.Property(release_title),dovi-2.) | String.Contains(ListItem.Property(release_title),dolby.vision.2.) | String.Contains(ListItem.Property(release_title),dolby-vision-2.) | String.Contains(ListItem.Property(release_title),dolbyvision2.) | String.Contains(ListItem.Property(release_title),dolbyvision2-)]</visible>
                             </control>
                             <control type="image">
                                 <left>96</left>
@@ -943,7 +952,16 @@
                                 <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.hdrcodec_1)].png</texture>
                                 <colordiffuse>B3FFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1))</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + ![String.IsEqual(ListItem.Property(info.hdrcodec_1),DV) + [String.Contains(ListItem.Property(release_title),.dv2.) | String.Contains(ListItem.Property(release_title),.dv2-) | String.Contains(ListItem.Property(release_title),-dv2.) | String.Contains(ListItem.Property(release_title),-dv2-) | String.Contains(ListItem.Property(release_title),dovi2.) | String.Contains(ListItem.Property(release_title),dovi2-) | String.Contains(ListItem.Property(release_title),dovi.2.) | String.Contains(ListItem.Property(release_title),dovi-2.) | String.Contains(ListItem.Property(release_title),dolby.vision.2.) | String.Contains(ListItem.Property(release_title),dolby-vision-2.) | String.Contains(ListItem.Property(release_title),dolbyvision2.) | String.Contains(ListItem.Property(release_title),dolbyvision2-)]]</visible>
+                            </control>
+                            <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/DV2.png</texture>
+                                <colordiffuse>B3FFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEqual(ListItem.Property(info.hdrcodec_1),DV) + [String.Contains(ListItem.Property(release_title),.dv2.) | String.Contains(ListItem.Property(release_title),.dv2-) | String.Contains(ListItem.Property(release_title),-dv2.) | String.Contains(ListItem.Property(release_title),-dv2-) | String.Contains(ListItem.Property(release_title),dovi2.) | String.Contains(ListItem.Property(release_title),dovi2-) | String.Contains(ListItem.Property(release_title),dovi.2.) | String.Contains(ListItem.Property(release_title),dovi-2.) | String.Contains(ListItem.Property(release_title),dolby.vision.2.) | String.Contains(ListItem.Property(release_title),dolby-vision-2.) | String.Contains(ListItem.Property(release_title),dolbyvision2.) | String.Contains(ListItem.Property(release_title),dolbyvision2-)]</visible>
                             </control>
                             <control type="image">
                                 <left>96</left>
@@ -1467,7 +1485,16 @@
                                 <aspectratio>keep</aspectratio>
                                 <texture>lucent/flags/$INFO[ListItem.Property(info.hdrcodec_1)].png</texture>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
-                                <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1))</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + ![String.IsEqual(ListItem.Property(info.hdrcodec_1),DV) + [String.Contains(ListItem.Property(release_title),.dv2.) | String.Contains(ListItem.Property(release_title),.dv2-) | String.Contains(ListItem.Property(release_title),-dv2.) | String.Contains(ListItem.Property(release_title),-dv2-) | String.Contains(ListItem.Property(release_title),dovi2.) | String.Contains(ListItem.Property(release_title),dovi2-) | String.Contains(ListItem.Property(release_title),dovi.2.) | String.Contains(ListItem.Property(release_title),dovi-2.) | String.Contains(ListItem.Property(release_title),dolby.vision.2.) | String.Contains(ListItem.Property(release_title),dolby-vision-2.) | String.Contains(ListItem.Property(release_title),dolbyvision2.) | String.Contains(ListItem.Property(release_title),dolbyvision2-)]]</visible>
+                            </control>
+                            <control type="image">
+                                <left>0</left>
+                                <width>88</width>
+                                <height>34</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>lucent/flags/DV2.png</texture>
+                                <colordiffuse>FFFFFFFF</colordiffuse>
+                                <visible>!String.IsEmpty(ListItem.Property(info.hdrcodec_1)) + String.IsEqual(ListItem.Property(info.hdrcodec_1),DV) + [String.Contains(ListItem.Property(release_title),.dv2.) | String.Contains(ListItem.Property(release_title),.dv2-) | String.Contains(ListItem.Property(release_title),-dv2.) | String.Contains(ListItem.Property(release_title),-dv2-) | String.Contains(ListItem.Property(release_title),dovi2.) | String.Contains(ListItem.Property(release_title),dovi2-) | String.Contains(ListItem.Property(release_title),dovi.2.) | String.Contains(ListItem.Property(release_title),dovi-2.) | String.Contains(ListItem.Property(release_title),dolby.vision.2.) | String.Contains(ListItem.Property(release_title),dolby-vision-2.) | String.Contains(ListItem.Property(release_title),dolbyvision2.) | String.Contains(ListItem.Property(release_title),dolbyvision2-)]</visible>
                             </control>
                             <control type="image">
                                 <left>96</left>
